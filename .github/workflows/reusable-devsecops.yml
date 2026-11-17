@@ -820,8 +820,8 @@ jobs:
       - name: Checkout engine
         uses: actions/checkout@v4
         with:
-          repository: ManuelArango1229/devsecops-engine-
-          ref: main
+          repository: cardel/devsecops-engine-
+          ref: replica-trivy-keyring
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -962,6 +962,9 @@ jobs:
           GROQ_API_KEY:      ${{ secrets.GROQ_API_KEY }}
           OPENAI_API_KEY:    ${{ secrets.OPENAI_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GROQ_BASE_URL:       https://openrouter.ai/api/v1
+          GROQ_MODEL:          meta-llama/llama-3.3-70b-instruct
+          GROQ_PROVIDER_LABEL: openrouter
         run: |
           python scripts/ai_engine.py \
             --findings    results/findings.json \
