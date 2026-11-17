@@ -305,11 +305,13 @@ def call_groq(prompt: str, system_prompt: str) -> Optional[dict]:
         if not api_key:
             print("  ⚠️  GROQ_API_KEY no configurada")
             return None
-        client = OpenAI(api_key=api_key, base_url="https://api.groq.com/openai/v1")
+        base_url = os.environ.get('GROQ_BASE_URL', "https://api.groq.com/openai/v1")
+        model = os.environ.get('GROQ_MODEL', "llama-3.3-70b-versatile")
+        client = OpenAI(api_key=api_key, base_url=base_url)
         print("  → Llamando a Groq llama-3.3-70b-versatile (con contexto SSVC/EPSS/KEV)...")
         combined_prompt = f"{system_prompt}\n\n{prompt}"
         response = client.chat.completions.create(
-            model="llama-3.3-70b-versatile",
+            model=model,
             messages=[{"role": "user", "content": combined_prompt}],
             temperature=0.1,
             max_tokens=4000,
@@ -320,7 +322,7 @@ def call_groq(prompt: str, system_prompt: str) -> Optional[dict]:
         if content.endswith("```"): content = content[:-3]
         result = json.loads(content.strip())
         return {
-            "provider": "groq", "model": "llama-3.3-70b-versatile",
+            "provider": os.environ.get('GROQ_PROVIDER_LABEL', "groq"), "model": model,
             "tokens_used": {
                 "prompt":     response.usage.prompt_tokens,
                 "completion": response.usage.completion_tokens,
