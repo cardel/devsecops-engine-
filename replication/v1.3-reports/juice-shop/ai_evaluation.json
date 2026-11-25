@@ -1,0 +1,72 @@
+{
+  "schema_version": "3.0",
+  "generated_at": "2026-05-21T21:30:44.978827",
+  "findings_analyzed": 82,
+  "service": "juice-shop",
+  "environment": "staging",
+  "business_criticality": "high",
+  "ai_provider": "fallback_static",
+  "ai_model": "threshold_rules_v1",
+  "tokens_used": {
+    "prompt": 0,
+    "completion": 0,
+    "total": 0
+  },
+  "evaluation": {
+    "decision": "FAIL",
+    "confidence": 0.6,
+    "risk_level": "CRITICAL",
+    "summary": "Evaluación por umbrales estáticos: FAIL",
+    "reasoning": "Se encontraron 4 hallazgos críticos.",
+    "key_findings": [],
+    "attack_chains": [],
+    "ssvc_validation": [],
+    "ssvc_context_used": true,
+    "conditions": [],
+    "remediation_priorities": [],
+    "coverage_analysis": {
+      "sast_coverage": "parcial",
+      "sca_coverage": "parcial",
+      "dast_coverage": "parcial",
+      "pentest_coverage": "parcial",
+      "overall_coverage": "Evaluación básica sin contexto IA",
+      "blind_spots": []
+    },
+    "false_positive_estimate": "media",
+    "false_positive_reasoning": "Sin análisis contextual disponible.",
+    "owasp_top10_present": [],
+    "risk_score": 0.0,
+    "deploy_recommendation": "Revisar manualmente antes de proceder.",
+    "_note": "Esta evaluación NO usa IA. Configura GROQ_API_KEY."
+  },
+  "ssvc_enrichment": {
+    "used": true,
+    "action_counts": {
+      "Act": 42,
+      "Attend": 5,
+      "Track*": 26,
+      "Track": 9
+    },
+    "kev_entries": 1601,
+    "epss_fetched": 57,
+    "f1_metrics": {
+      "dimension": "Exploitation (active vs not_active)",
+      "ground_truth_source": "CISA KEV + EPSS ≥ 0.5",
+      "reference": "Al Haddad et al. (2025) – arXiv 2510.18508",
+      "cves_evaluated": 58,
+      "true_positives": 0,
+      "false_positives": 0,
+      "true_negatives": 58,
+      "false_negatives": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "accuracy": 1.0,
+      "note": "F1 calculado sobre la dimensión Exploitation del árbol SSVC. Solo CVEs con CISA KEV o EPSS disponible se incluyen en el cálculo. Hallazgos sin CVE ID (Semgrep/ZAP) se excluyen del cálculo formal."
+    },
+    "classified_count": 82
+  },
+  "prompt_version": "3.0-ssvc-enriched",
+  "_academic_reference": "Al Haddad et al. (2025) – arXiv 2510.18508",
+  "_academic_note": "Evaluación híbrida: LLM enriquecido con clasificaciones SSVC preliminares y datos empíricos EPSS/CISA KEV. El LLM puede validar o corregir las clasificaciones SSVC con razonamiento contextual."
+}

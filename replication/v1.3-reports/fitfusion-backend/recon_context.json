@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-05-21T21:17:15.213054",
+  "target_url": "http://localhost:3000",
+  "host": "localhost",
+  "port": 3000,
+  "nmap": {
+    "available": true,
+    "open_ports": [
+      22,
+      3000
+    ],
+    "services": {
+      "22": {
+        "service": "ssh",
+        "version": "OpenSSH 9.6p1 Ubuntu 3ubuntu13.16 (Ubuntu Linux; protocol 2.0)",
+        "interesting": false
+      },
+      "3000": {
+        "service": "http",
+        "version": "Node.js Express framework",
+        "interesting": false
+      }
+    },
+    "interesting_ports": [],
+    "raw_summary": "PORT     STATE SERVICE VERSION\n22/tcp   open  ssh     OpenSSH 9.6p1 Ubuntu 3ubuntu13.16 (Ubuntu Linux; protocol 2.0)\n3000/tcp open  http    Node.js Express framework"
+  },
+  "route_discovery": {
+    "available": true,
+    "discovered_routes": [],
+    "routes_detail": [],
+    "interesting_routes": []
+  },
+  "fingerprint": {
+    "available": true,
+    "technologies": [
+      "Express",
+      "Node.js"
+    ],
+    "server": "",
+    "title": "Error",
+    "security_headers": {
+      "present": [],
+      "missing": [
+        "content-security-policy",
+        "strict-transport-security",
+        "x-frame-options",
+        "x-content-type-options",
+        "referrer-policy",
+        "permissions-policy"
+      ]
+    },
+    "status_code": 0
+  },
+  "waf": {
+    "available": true,
+    "waf_detected": false,
+    "waf_name": null
+  },
+  "attack_surface": {
+    "total_findings": 2,
+    "high": 0,
+    "medium": 1,
+    "info": 1,
+    "findings": [
+      {
+        "type": "missing_security_headers",
+        "severity": "MEDIUM",
+        "detail": "Headers faltantes: content-security-policy, strict-transport-security, x-frame-options, x-content-type-options, referrer-policy, permissions-policy"
+      },
+      {
+        "type": "no_waf",
+        "severity": "INFO",
+        "detail": "No se detect\u00f3 WAF \u2014 tr\u00e1fico malicioso llega directo a la app"
+      }
+    ]
+  },
+  "nuclei_targets": [
+    "http://localhost:3000"
+  ],
+  "summary": {
+    "open_ports": [
+      22,
+      3000
+    ],
+    "discovered_routes_count": 0,
+    "technologies": [
+      "Express",
+      "Node.js"
+    ],
+    "waf_present": false,
+    "missing_security_headers": [
+      "content-security-policy",
+      "strict-transport-security",
+      "x-frame-options",
+      "x-content-type-options",
+      "referrer-policy",
+      "permissions-policy"
+    ],
+    "attack_surface_findings": 2
+  }
+}

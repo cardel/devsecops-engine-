@@ -1,0 +1,171 @@
+{
+  "schema_version": "3.0",
+  "generated_at": "2026-11-17T18:40:02.352468",
+  "findings_analyzed": 109,
+  "service": "webgoat",
+  "environment": "staging",
+  "business_criticality": "high",
+  "ai_provider": "openai",
+  "ai_model": "gpt-4o-mini",
+  "tokens_used": {
+    "prompt": 7779,
+    "completion": 1601,
+    "total": 9380
+  },
+  "evaluation": {
+    "decision": "FAIL",
+    "confidence": 0.9,
+    "risk_level": "CRITICAL",
+    "summary": "El análisis de seguridad del servicio WebGoat revela múltiples hallazgos críticos y altos, algunos de los cuales son explotables remotamente. La presencia de vulnerabilidades de inyección SQL y componentes vulnerables que pueden ser explotados sin autenticación representan un riesgo significativo para la integridad y confidencialidad de los datos.",
+    "reasoning": "Se identificaron vulnerabilidades críticas como inyecciones SQL (CWE-89) y componentes vulnerables (CVE-2026-111497) con un EPSS de 0.826, lo que indica una alta probabilidad de explotación. Además, el hallazgo CVE-2026-109518, aunque tiene un EPSS de 0.009, es crítico debido a su naturaleza de ejecución remota. La combinación de estas vulnerabilidades puede permitir a un atacante comprometer el sistema de manera efectiva.",
+    "ssvc_validation": [
+      {
+        "finding_id": "SEM-1557C43F",
+        "title": "Tainted Sql String",
+        "ssvc_preliminary": "Act",
+        "epss_score": 0.0,
+        "in_kev": false,
+        "ai_assessment": "overestimated",
+        "reasoning": "La clasificación SSVC como 'Act' es una sobreestimación, ya que el EPSS de 0.0 indica que no hay evidencia de explotación activa. Aunque la heurística CWE sugiere un riesgo, el contexto específico de la aplicación y la falta de exploits públicos reducen la urgencia."
+      },
+      {
+        "finding_id": "TRI-83E0FAD3",
+        "title": "CVE-2026-109518 – apt: Remote code execution via hard link reuse during package download retries",
+        "ssvc_preliminary": "Act",
+        "epss_score": 0.0093,
+        "in_kev": false,
+        "ai_assessment": "overestimated",
+        "reasoning": "Aunque se clasifica como 'Act', el bajo EPSS y la ausencia en KEV sugieren que el riesgo real puede ser menor de lo que indica la clasificación inicial."
+      },
+      {
+        "finding_id": "TRI-C4C5C885",
+        "title": "CVE-2026-111497 – brotli: Out-of-Bounds Write in Google Brotli Decoder",
+        "ssvc_preliminary": "Act",
+        "epss_score": 0.8264,
+        "in_kev": true,
+        "ai_assessment": "confirmed",
+        "reasoning": "Este hallazgo tiene un EPSS alto y está en KEV, lo que confirma su explotación activa y justifica su clasificación como 'Act'."
+      }
+    ],
+    "ssvc_context_used": true,
+    "key_findings": [
+      {
+        "title": "CVE-2026-111497 – brotli: Out-of-Bounds Write in Google Brotli Decoder",
+        "severity": "HIGH",
+        "cvss_score": 9.8,
+        "category": "A06:2021 – Vulnerable and Outdated Components",
+        "cwe": "CWE-119",
+        "exploitability": "alta",
+        "epss_informed": true,
+        "remote_exploitable": true,
+        "auth_required": false,
+        "public_exploit": true,
+        "why_important": "La explotación de esta vulnerabilidad puede permitir a un atacante ejecutar código arbitrario, comprometiendo completamente el sistema.",
+        "business_impact": "Un ataque exitoso podría resultar en la pérdida de datos sensibles y daños a la reputación de la empresa."
+      },
+      {
+        "title": "Tainted Sql String",
+        "severity": "HIGH",
+        "cvss_score": 0.0,
+        "category": "A03:2021 – Injection",
+        "cwe": "CWE-89",
+        "exploitability": "alta",
+        "epss_informed": false,
+        "remote_exploitable": true,
+        "auth_required": false,
+        "public_exploit": true,
+        "why_important": "La posibilidad de inyección SQL permite a un atacante manipular la base de datos, lo que puede llevar a la pérdida de datos o a la exposición de información sensible.",
+        "business_impact": "Esto podría resultar en sanciones legales y pérdida de confianza por parte de los clientes."
+      }
+    ],
+    "attack_chains": [
+      {
+        "chain_id": "CHAIN-001",
+        "title": "Explotación de inyección SQL y ejecución remota de código",
+        "severity": "CRITICAL",
+        "finding_ids": [
+          "SEM-1557C43F",
+          "TRI-C4C5C885"
+        ],
+        "steps": [
+          "Paso 1: El atacante explota la vulnerabilidad de inyección SQL para obtener acceso a la base de datos.",
+          "Paso 2: Con acceso a la base de datos, el atacante puede manipular datos o ejecutar comandos SQL maliciosos.",
+          "Paso 3: Utilizando la vulnerabilidad de ejecución remota de código en el componente Brotli, el atacante ejecuta código arbitrario en el servidor."
+        ],
+        "likelihood": "alta",
+        "combined_impact": "La combinación de estas vulnerabilidades permite un ataque devastador que puede comprometer completamente el sistema y exponer datos sensibles."
+      }
+    ],
+    "conditions": [],
+    "remediation_priorities": [
+      {
+        "priority": 1,
+        "finding_id": "TRI-C4C5C885",
+        "action": "Actualizar libbrotli1 de 1.1.0-2build2 a 1.1.0-2ubuntu0.1",
+        "tool": "trivy",
+        "timeline": "inmediato",
+        "effort": "bajo",
+        "fix_available": true,
+        "fix_version": "1.1.0-2ubuntu0.1"
+      },
+      {
+        "priority": 2,
+        "finding_id": "SEM-1557C43F",
+        "action": "Revisar y corregir el patrón de inyección SQL en el código fuente.",
+        "tool": "semgrep",
+        "timeline": "corto plazo",
+        "effort": "alto",
+        "fix_available": false,
+        "fix_version": null
+      }
+    ],
+    "coverage_analysis": {
+      "sast_coverage": "buena",
+      "sca_coverage": "buena",
+      "dast_coverage": "parcial",
+      "pentest_coverage": "parcial",
+      "overall_coverage": "La cobertura general es adecuada, pero se deben abordar las vulnerabilidades críticas.",
+      "blind_spots": [
+        "Falta de pruebas de penetración exhaustivas en el entorno de staging."
+      ]
+    },
+    "false_positive_estimate": "baja",
+    "false_positive_reasoning": "La mayoría de los hallazgos son válidos y se basan en patrones de código que son comúnmente explotables.",
+    "owasp_top10_present": [
+      "A03:2021 – Injection",
+      "A06:2021 – Vulnerable and Outdated Components"
+    ],
+    "risk_score": 9.8,
+    "deploy_recommendation": "No se recomienda el despliegue hasta que se aborden las vulnerabilidades críticas y se implementen las correcciones necesarias."
+  },
+  "ssvc_enrichment": {
+    "used": true,
+    "action_counts": {
+      "Act": 54,
+      "Attend": 17,
+      "Track*": 31,
+      "Track": 7
+    },
+    "kev_entries": 1781,
+    "epss_fetched": 86,
+    "f1_metrics": {
+      "dimension": "Exploitation (active vs not_active)",
+      "ground_truth_source": "CISA KEV + EPSS ≥ 0.5",
+      "reference": "Al Haddad et al. (2025) – arXiv 2510.18508",
+      "cves_evaluated": 87,
+      "true_positives": 12,
+      "false_positives": 0,
+      "true_negatives": 75,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "accuracy": 1.0,
+      "note": "F1 calculado sobre la dimensión Exploitation del árbol SSVC. Solo CVEs con CISA KEV o EPSS disponible se incluyen en el cálculo. Hallazgos sin CVE ID (Semgrep/ZAP) se excluyen del cálculo formal."
+    },
+    "classified_count": 109
+  },
+  "prompt_version": "3.0-ssvc-enriched",
+  "_academic_reference": "Al Haddad et al. (2025) – arXiv 2510.18508",
+  "_academic_note": "Evaluación híbrida: LLM enriquecido con clasificaciones SSVC preliminares y datos empíricos EPSS/CISA KEV. El LLM puede validar o corregir las clasificaciones SSVC con razonamiento contextual."
+}

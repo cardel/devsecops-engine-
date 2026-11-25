@@ -1,0 +1,195 @@
+{
+  "schema_version": "3.0",
+  "generated_at": "2026-11-17T18:49:42.502884",
+  "findings_analyzed": 10984,
+  "service": "pygoat",
+  "environment": "staging",
+  "business_criticality": "high",
+  "ai_provider": "openai",
+  "ai_model": "gpt-4o-mini",
+  "tokens_used": {
+    "prompt": 7579,
+    "completion": 1686,
+    "total": 9265
+  },
+  "evaluation": {
+    "decision": "FAIL",
+    "confidence": 0.9,
+    "risk_level": "CRITICAL",
+    "summary": "El análisis ha revelado múltiples hallazgos críticos y altos que son explotables remotamente, lo que representa un riesgo significativo para el servicio pygoat. La presencia de vulnerabilidades de inyección y componentes vulnerables requiere atención inmediata antes de proceder con el despliegue.",
+    "reasoning": "Se identificaron varios hallazgos críticos y altos, incluyendo inyecciones de subprocess y vulnerabilidades en componentes como CVE-2026-109518 y CVE-2022-3736, que tienen un EPSS que indica una explotación potencial. La combinación de estas vulnerabilidades podría permitir a un atacante ejecutar código arbitrario o causar una denegación de servicio, lo que comprometería la integridad y disponibilidad del servicio.",
+    "ssvc_validation": [
+      {
+        "finding_id": "SEM-B5D49B50",
+        "title": "Subprocess Injection",
+        "ssvc_preliminary": "Act",
+        "epss_score": 0.0,
+        "in_kev": false,
+        "ai_assessment": "overestimated",
+        "reasoning": "Aunque clasificado como 'Act', el EPSS de 0.0 sugiere que la explotación real es poco probable, lo que indica una posible sobreestimación basada en heurísticas CWE."
+      },
+      {
+        "finding_id": "TRI-83E0FAD3",
+        "title": "CVE-2026-109518 – apt: Remote code execution via hard link reuse during package download retries",
+        "ssvc_preliminary": "Act",
+        "epss_score": 0.0093,
+        "in_kev": false,
+        "ai_assessment": "overestimated",
+        "reasoning": "El EPSS bajo y la ausencia en KEV sugieren que, aunque es crítico, la explotación activa es poco probable en este contexto."
+      },
+      {
+        "finding_id": "TRI-45866BF5",
+        "title": "CVE-2022-3736 – bind: sending specific queries to the resolver may cause a DoS",
+        "ssvc_preliminary": "Act",
+        "epss_score": 0.4843,
+        "in_kev": false,
+        "ai_assessment": "confirmed",
+        "reasoning": "El EPSS alto indica una explotación activa, lo que confirma la clasificación SSVC como 'Act' es apropiada."
+      }
+    ],
+    "ssvc_context_used": true,
+    "key_findings": [
+      {
+        "title": "Subprocess Injection",
+        "severity": "HIGH",
+        "cvss_score": 0.0,
+        "category": "A03:2021 – Injection",
+        "cwe": "CWE-78",
+        "exploitability": "alta",
+        "epss_informed": true,
+        "remote_exploitable": true,
+        "auth_required": false,
+        "public_exploit": true,
+        "why_important": "Permite la ejecución de comandos arbitrarios, comprometiendo la seguridad del servidor.",
+        "business_impact": "Puede resultar en la pérdida de datos sensibles y daños a la reputación de la empresa."
+      },
+      {
+        "title": "CVE-2026-109518",
+        "severity": "HIGH",
+        "cvss_score": 8.1,
+        "category": "A06:2021 – Vulnerable and Outdated Components",
+        "cwe": null,
+        "exploitability": "alta",
+        "epss_informed": true,
+        "remote_exploitable": true,
+        "auth_required": false,
+        "public_exploit": true,
+        "why_important": "Explotable por un atacante en la red, comprometiendo la integridad de las instalaciones de software.",
+        "business_impact": "Puede permitir la instalación de software malicioso, afectando la operación del servicio."
+      },
+      {
+        "title": "CVE-2022-3736",
+        "severity": "HIGH",
+        "cvss_score": 7.5,
+        "category": "A06:2021 – Vulnerable and Outdated Components",
+        "cwe": null,
+        "exploitability": "alta",
+        "epss_informed": true,
+        "remote_exploitable": true,
+        "auth_required": false,
+        "public_exploit": true,
+        "why_important": "Puede causar una denegación de servicio, afectando la disponibilidad del servicio.",
+        "business_impact": "Impacto directo en la disponibilidad del servicio, afectando a los usuarios finales."
+      }
+    ],
+    "attack_chains": [
+      {
+        "chain_id": "CHAIN-001",
+        "title": "Explotación de inyección de comandos y DoS",
+        "severity": "CRITICAL",
+        "finding_ids": [
+          "SEM-B5D49B50",
+          "TRI-45866BF5"
+        ],
+        "steps": [
+          "Paso 1: El atacante explota la vulnerabilidad de inyección de subprocess para ejecutar comandos arbitrarios.",
+          "Paso 2: Utiliza la vulnerabilidad CVE-2022-3736 para enviar consultas específicas que causan un DoS.",
+          "Paso 3: Resultado final: El atacante puede comprometer el servidor y causar una interrupción del servicio."
+        ],
+        "likelihood": "alta",
+        "combined_impact": "La combinación de estas vulnerabilidades puede resultar en una pérdida de control total sobre el servidor y una interrupción significativa del servicio."
+      }
+    ],
+    "conditions": [],
+    "remediation_priorities": [
+      {
+        "priority": 1,
+        "finding_id": "SEM-B5D49B50",
+        "action": "Corregir la inyección de subprocess en source_to_scan/challenge/views.py:81",
+        "tool": "semgrep",
+        "timeline": "inmediato",
+        "effort": "alto",
+        "fix_available": false,
+        "fix_version": null
+      },
+      {
+        "priority": 2,
+        "finding_id": "TRI-83E0FAD3",
+        "action": "Actualizar apt a una versión segura o considerar alternativas.",
+        "tool": "trivy",
+        "timeline": "corto plazo",
+        "effort": "medio",
+        "fix_available": false,
+        "fix_version": null
+      },
+      {
+        "priority": 3,
+        "finding_id": "TRI-45866BF5",
+        "action": "Actualizar bind9-dnsutils a la versión más reciente.",
+        "tool": "trivy",
+        "timeline": "corto plazo",
+        "effort": "medio",
+        "fix_available": true,
+        "fix_version": "1:9.16.37-1~deb11u1"
+      }
+    ],
+    "coverage_analysis": {
+      "sast_coverage": "buena",
+      "sca_coverage": "buena",
+      "dast_coverage": "parcial",
+      "pentest_coverage": "parcial",
+      "overall_coverage": "La cobertura general es adecuada, pero se requieren pruebas adicionales para asegurar la seguridad.",
+      "blind_spots": [
+        "Dependencias de terceros no auditadas"
+      ]
+    },
+    "false_positive_estimate": "baja",
+    "false_positive_reasoning": "La mayoría de los hallazgos son válidos y se basan en configuraciones inseguras y componentes vulnerables.",
+    "owasp_top10_present": [
+      "A03:2021 – Injection",
+      "A06:2021 – Vulnerable and Outdated Components"
+    ],
+    "risk_score": 8.1,
+    "deploy_recommendation": "No proceder con el despliegue hasta que se aborden las vulnerabilidades críticas y altas identificadas."
+  },
+  "ssvc_enrichment": {
+    "used": true,
+    "action_counts": {
+      "Act": 2450,
+      "Attend": 590,
+      "Track*": 7908,
+      "Track": 36
+    },
+    "kev_entries": 1782,
+    "epss_fetched": 10925,
+    "f1_metrics": {
+      "dimension": "Exploitation (active vs not_active)",
+      "ground_truth_source": "CISA KEV + EPSS ≥ 0.5",
+      "reference": "Al Haddad et al. (2025) – arXiv 2510.18508",
+      "cves_evaluated": 10937,
+      "true_positives": 44,
+      "false_positives": 0,
+      "true_negatives": 10893,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "accuracy": 1.0,
+      "note": "F1 calculado sobre la dimensión Exploitation del árbol SSVC. Solo CVEs con CISA KEV o EPSS disponible se incluyen en el cálculo. Hallazgos sin CVE ID (Semgrep/ZAP) se excluyen del cálculo formal."
+    },
+    "classified_count": 10984
+  },
+  "prompt_version": "3.0-ssvc-enriched",
+  "_academic_reference": "Al Haddad et al. (2025) – arXiv 2510.18508",
+  "_academic_note": "Evaluación híbrida: LLM enriquecido con clasificaciones SSVC preliminares y datos empíricos EPSS/CISA KEV. El LLM puede validar o corregir las clasificaciones SSVC con razonamiento contextual."
+}

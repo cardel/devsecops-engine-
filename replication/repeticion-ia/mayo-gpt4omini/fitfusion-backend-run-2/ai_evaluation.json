@@ -1,0 +1,170 @@
+{
+  "schema_version": "3.0",
+  "generated_at": "2026-11-17T19:45:58.390612",
+  "findings_analyzed": 59,
+  "service": "fitfusion-backend",
+  "environment": "staging",
+  "business_criticality": "high",
+  "ai_provider": "openai",
+  "ai_model": "gpt-4o-mini",
+  "tokens_used": {
+    "prompt": 8302,
+    "completion": 1583,
+    "total": 9885
+  },
+  "evaluation": {
+    "decision": "FAIL",
+    "confidence": 0.9,
+    "risk_level": "CRITICAL",
+    "summary": "El análisis de seguridad del servicio fitfusion-backend revela múltiples vulnerabilidades críticas y altas, algunas de las cuales son explotables remotamente. La presencia de vulnerabilidades con un alto potencial de explotación activa, junto con la falta de parches disponibles, justifica la decisión de no permitir el despliegue en este momento.",
+    "reasoning": "Se identificaron varias vulnerabilidades críticas y altas, como CVE-2025-15467 y CVE-2026-33937, que tienen un EPSS significativo y son explotables remotamente sin autenticación. La validación cruzada de SSVC indica que algunas clasificaciones pueden ser sobreestimadas, pero el riesgo real sigue siendo alto debido a la criticidad del servicio y la posibilidad de explotación activa. La falta de parches disponibles para estas vulnerabilidades aumenta la urgencia de remediación.",
+    "ssvc_validation": [
+      {
+        "finding_id": "TRI-3B709604",
+        "title": "CVE-2026-31789 – openssl: OpenSSL: Heap buffer overflow on 32-bit systems from large X.509 certificate processing",
+        "ssvc_preliminary": "Act",
+        "epss_score": 0.0025,
+        "in_kev": false,
+        "ai_assessment": "overestimated",
+        "reasoning": "Aunque la clasificación SSVC es 'Act', el EPSS bajo y la ausencia en KEV sugieren que el riesgo real puede ser menor de lo que indica la heurística de CWE."
+      },
+      {
+        "finding_id": "TRI-8CEE03CF",
+        "title": "CVE-2025-15467 – openssl: OpenSSL: Remote code execution or Denial of Service via oversized Initialization Vector in CMS parsing",
+        "ssvc_preliminary": "Act",
+        "epss_score": 0.7479,
+        "in_kev": false,
+        "ai_assessment": "confirmed",
+        "reasoning": "El EPSS alto y la naturaleza crítica de la vulnerabilidad confirman su explotación activa, lo que justifica su clasificación como 'Act'."
+      },
+      {
+        "finding_id": "TRI-C387FCB0",
+        "title": "CVE-2026-33937 – handlebars.js: Handlebars: Remote Code Execution via crafted Abstract Syntax Tree object in compile()",
+        "ssvc_preliminary": "Act",
+        "epss_score": 0.0195,
+        "in_kev": false,
+        "ai_assessment": "confirmed",
+        "reasoning": "La vulnerabilidad es crítica y tiene un potencial de explotación activa, lo que justifica su clasificación como 'Act'."
+      }
+    ],
+    "ssvc_context_used": true,
+    "key_findings": [
+      {
+        "title": "CVE-2025-15467 – openssl: OpenSSL: Remote code execution or Denial of Service via oversized Initialization Vector in CMS parsing",
+        "severity": "HIGH",
+        "cvss_score": 9.8,
+        "category": "A06:2021 – Vulnerable and Outdated Components",
+        "cwe": null,
+        "exploitability": "alta",
+        "epss_informed": true,
+        "remote_exploitable": true,
+        "auth_required": false,
+        "public_exploit": true,
+        "why_important": "Esta vulnerabilidad permite la ejecución remota de código, lo que podría comprometer completamente el servicio.",
+        "business_impact": "Un ataque exitoso podría resultar en la pérdida de datos sensibles y daños a la reputación de la empresa."
+      },
+      {
+        "title": "CVE-2026-33937 – handlebars.js: Handlebars: Remote Code Execution via crafted Abstract Syntax Tree object in compile()",
+        "severity": "CRITICAL",
+        "cvss_score": 9.8,
+        "category": "A06:2021 – Vulnerable and Outdated Components",
+        "cwe": null,
+        "exploitability": "alta",
+        "epss_informed": true,
+        "remote_exploitable": true,
+        "auth_required": false,
+        "public_exploit": true,
+        "why_important": "Permite la ejecución remota de código, lo que puede llevar a un compromiso total del sistema.",
+        "business_impact": "Podría resultar en un acceso no autorizado a datos críticos y afectar la confianza del cliente."
+      }
+    ],
+    "attack_chains": [
+      {
+        "chain_id": "CHAIN-001",
+        "title": "Explotación de vulnerabilidades en OpenSSL y Handlebars",
+        "severity": "CRITICAL",
+        "finding_ids": [
+          "TRI-8CEE03CF",
+          "TRI-C387FCB0"
+        ],
+        "steps": [
+          "Paso 1: El atacante explota CVE-2025-15467 para ejecutar código malicioso en el servidor.",
+          "Paso 2: Con acceso obtenido, utiliza CVE-2026-33937 para ejecutar código adicional a través de Handlebars.",
+          "Paso 3: Resultado final: Compromiso total del sistema y posible filtración de datos sensibles."
+        ],
+        "likelihood": "alta",
+        "combined_impact": "El impacto combinado de estas vulnerabilidades puede resultar en una brecha de datos masiva y daños irreparables a la reputación de la empresa."
+      }
+    ],
+    "conditions": [],
+    "remediation_priorities": [
+      {
+        "priority": 1,
+        "finding_id": "TRI-8CEE03CF",
+        "action": "Actualizar libcrypto3 a la versión 3.3.6-r0 o superior.",
+        "tool": "trivy",
+        "timeline": "inmediato",
+        "effort": "medio",
+        "fix_available": true,
+        "fix_version": "3.3.6-r0"
+      },
+      {
+        "priority": 2,
+        "finding_id": "TRI-C387FCB0",
+        "action": "Actualizar handlebars a la versión 4.7.9.",
+        "tool": "trivy",
+        "timeline": "inmediato",
+        "effort": "bajo",
+        "fix_available": true,
+        "fix_version": "4.7.9"
+      }
+    ],
+    "coverage_analysis": {
+      "sast_coverage": "buena",
+      "sca_coverage": "buena",
+      "dast_coverage": "parcial",
+      "pentest_coverage": "parcial",
+      "overall_coverage": "La cobertura general es adecuada, pero se deben abordar las vulnerabilidades críticas.",
+      "blind_spots": [
+        "Vulnerabilidades en dependencias de terceros no cubiertas por SAST."
+      ]
+    },
+    "false_positive_estimate": "baja",
+    "false_positive_reasoning": "Las vulnerabilidades identificadas son críticas y tienen un alto potencial de explotación, lo que sugiere que son reales y no falsos positivos.",
+    "owasp_top10_present": [
+      "A06:2021 – Vulnerable and Outdated Components"
+    ],
+    "risk_score": 0.0,
+    "deploy_recommendation": "No se recomienda el despliegue hasta que se aborden las vulnerabilidades críticas y altas identificadas."
+  },
+  "ssvc_enrichment": {
+    "used": true,
+    "action_counts": {
+      "Act": 35,
+      "Attend": 4,
+      "Track*": 13,
+      "Track": 7
+    },
+    "kev_entries": 1782,
+    "epss_fetched": 48,
+    "f1_metrics": {
+      "dimension": "Exploitation (active vs not_active)",
+      "ground_truth_source": "CISA KEV + EPSS ≥ 0.5",
+      "reference": "Al Haddad et al. (2025) – arXiv 2510.18508",
+      "cves_evaluated": 48,
+      "true_positives": 1,
+      "false_positives": 0,
+      "true_negatives": 47,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "accuracy": 1.0,
+      "note": "F1 calculado sobre la dimensión Exploitation del árbol SSVC. Solo CVEs con CISA KEV o EPSS disponible se incluyen en el cálculo. Hallazgos sin CVE ID (Semgrep/ZAP) se excluyen del cálculo formal."
+    },
+    "classified_count": 59
+  },
+  "prompt_version": "3.0-ssvc-enriched",
+  "_academic_reference": "Al Haddad et al. (2025) – arXiv 2510.18508",
+  "_academic_note": "Evaluación híbrida: LLM enriquecido con clasificaciones SSVC preliminares y datos empíricos EPSS/CISA KEV. El LLM puede validar o corregir las clasificaciones SSVC con razonamiento contextual."
+}

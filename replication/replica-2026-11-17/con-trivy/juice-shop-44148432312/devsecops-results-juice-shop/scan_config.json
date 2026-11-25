@@ -1,0 +1,121 @@
+{
+  "schema_version": "1.0",
+  "detected_at": "/home/runner/work/devsecops-replica/devsecops-replica/source_to_scan",
+  "service": "juice-shop",
+  "criticality": "high",
+  "environment": "staging",
+  "language": {
+    "primary": "nodejs",
+    "all": [
+      "nodejs"
+    ],
+    "markers_found": {
+      "nodejs": [
+        "package.json"
+      ]
+    }
+  },
+  "scan_mode": {
+    "mode": "image",
+    "description": "Imagen Docker proporcionada — pull y levantar",
+    "target_image": "bkimminich/juice-shop:latest",
+    "requires_docker": true
+  },
+  "api_spec": {
+    "detected": true,
+    "spec_file": "swagger.yml",
+    "spec_url": null,
+    "enable_api_scan": true
+  },
+  "secrets_config": {
+    "config_files_found": [],
+    "scan_for_secrets": true
+  },
+  "tools": {
+    "semgrep": {
+      "rulesets": "p/nodejs",
+      "language": "nodejs",
+      "extra_configs": []
+    },
+    "trivy": {
+      "scan_type": "image",
+      "target": "bkimminich/juice-shop:latest",
+      "extra_flags": "--scanners vuln,secret,misconfig"
+    },
+    "zap": {
+      "enabled": true,
+      "scan_type": "baseline"
+    },
+    "nuclei": {
+      "enabled": true,
+      "version": "v3.3.8",
+      "tags": "owasp,jwt,sqli,xss,exposure,misconfig,cve,token,auth,api,swagger,openapi",
+      "rate_limit": 50,
+      "timeout": 30,
+      "use_discovered_routes": true,
+      "api_spec": "swagger.yml"
+    },
+    "recon": {
+      "enabled": true,
+      "tools": [
+        "nmap",
+        "ffuf",
+        "httpx",
+        "wafw00f"
+      ]
+    }
+  },
+  "iso27034_anf": {
+    "ref": "ISO/IEC 27034-1:2011 §7.3.3",
+    "criticality": "high",
+    "tlot_score": 0.8,
+    "required_ascs": [
+      "semgrep",
+      "trivy",
+      "zap",
+      "nuclei"
+    ],
+    "asc_definitions": [
+      {
+        "asc_id": "ASC-SAST-001",
+        "tool": "semgrep",
+        "name": "Static Application Security Testing",
+        "ref": "ISO/IEC 27034-1 Annex A",
+        "mandatory": true,
+        "enabled": true
+      },
+      {
+        "asc_id": "ASC-SCA-001",
+        "tool": "trivy",
+        "name": "Software Composition Analysis",
+        "ref": "ISO/IEC 27034-1 Annex A",
+        "mandatory": true,
+        "enabled": true
+      },
+      {
+        "asc_id": "ASC-DAST-001",
+        "tool": "zap",
+        "name": "Dynamic Application Security Testing",
+        "ref": "ISO/IEC 27034-1 Annex A",
+        "mandatory": true,
+        "enabled": true
+      },
+      {
+        "asc_id": "ASC-PENTEST-001",
+        "tool": "nuclei",
+        "name": "Automated Penetration Testing",
+        "ref": "ISO/IEC 27034-1 Annex A",
+        "mandatory": true,
+        "enabled": true
+      }
+    ],
+    "policy": "Criticidad 'high': SAST+SCA obligatorios. Ademas: ZAP, NUCLEI."
+  },
+  "summary": {
+    "language": "nodejs",
+    "scan_mode": "image",
+    "dast_enabled": true,
+    "api_scan_enabled": true,
+    "recon_enabled": true
+  }
+}

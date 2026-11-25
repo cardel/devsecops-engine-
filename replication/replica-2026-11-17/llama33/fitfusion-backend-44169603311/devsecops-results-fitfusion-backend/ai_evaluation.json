@@ -1,0 +1,161 @@
+{
+  "schema_version": "3.0",
+  "generated_at": "2026-11-17T20:39:06.178600",
+  "findings_analyzed": 127,
+  "service": "fitfusion-backend",
+  "environment": "staging",
+  "business_criticality": "high",
+  "ai_provider": "openrouter",
+  "ai_model": "meta-llama/llama-3.3-70b-instruct",
+  "tokens_used": {
+    "prompt": 8499,
+    "completion": 1500,
+    "total": 9999
+  },
+  "evaluation": {
+    "decision": "FAIL",
+    "confidence": 0.9,
+    "risk_level": "CRITICAL",
+    "summary": "Se han identificado varias vulnerabilidades críticas y altas en el pipeline de DevSecOps, incluyendo explotaciones remotas sin autenticación y cadenas de ataque potenciales. La mayoría de estas vulnerabilidades están relacionadas con componentes desactualizados y configuraciones inseguras.",
+    "reasoning": "El análisis detallado de los hallazgos de seguridad revela que varias vulnerabilidades tienen un alto nivel de explotabilidad, según los scores EPSS y la presencia en la lista KEV. Además, se han identificado cadenas de ataque que podrían permitir a un atacante realizar acciones devastadoras. La vulnerabilidad CVE-2026-31789, por ejemplo, permite la ejecución de código arbitrario en el servidor, mientras que la vulnerabilidad CVE-2025-15467 permite la ejecución remota de código sin autenticación.",
+    "ssvc_validation": [
+      {
+        "finding_id": "TRI-3B709604",
+        "title": "CVE-2026-31789 – openssl: OpenSSL: Heap buffer overflow on 32-bit systems from large X.509 certificate processing",
+        "ssvc_preliminary": "Act",
+        "epss_score": 0.0025,
+        "in_kev": false,
+        "ai_assessment": "confirmed",
+        "reasoning": "La vulnerabilidad tiene un alto nivel de explotabilidad y un impacto técnico significativo, por lo que se confirma la clasificación SSVC Act."
+      },
+      {
+        "finding_id": "TRI-8CEE03CF",
+        "title": "CVE-2025-15467 – openssl: OpenSSL: Remote code execution or Denial of Service via oversized Initialization Vector in CMS parsing",
+        "ssvc_preliminary": "Act",
+        "epss_score": 0.7479,
+        "in_kev": false,
+        "ai_assessment": "confirmed",
+        "reasoning": "La vulnerabilidad tiene un alto nivel de explotabilidad y un impacto técnico significativo, por lo que se confirma la clasificación SSVC Act."
+      }
+    ],
+    "ssvc_context_used": true,
+    "key_findings": [
+      {
+        "title": "CVE-2026-31789 – openssl: OpenSSL: Heap buffer overflow on 32-bit systems from large X.509 certificate processing",
+        "severity": "CRITICAL",
+        "cvss_score": 9.8,
+        "category": "A06:2021 – Vulnerable and Outdated Components",
+        "cwe": "CWE-122",
+        "exploitability": "alta",
+        "epss_informed": true,
+        "remote_exploitable": true,
+        "auth_required": false,
+        "public_exploit": true,
+        "why_important": "Permite la ejecución de código arbitrario en el servidor",
+        "business_impact": "Puede causar una brecha de seguridad crítica en el sistema"
+      },
+      {
+        "title": "CVE-2025-15467 – openssl: OpenSSL: Remote code execution or Denial of Service via oversized Initialization Vector in CMS parsing",
+        "severity": "HIGH",
+        "cvss_score": 9.8,
+        "category": "A06:2021 – Vulnerable and Outdated Components",
+        "cwe": "CWE-400",
+        "exploitability": "alta",
+        "epss_informed": true,
+        "remote_exploitable": true,
+        "auth_required": false,
+        "public_exploit": true,
+        "why_important": "Permite la ejecución remota de código sin autenticación",
+        "business_impact": "Puede causar una brecha de seguridad crítica en el sistema"
+      }
+    ],
+    "attack_chains": [
+      {
+        "chain_id": "CHAIN-001",
+        "title": "Cadena de ataque para ejecución remota de código",
+        "severity": "CRITICAL",
+        "finding_ids": [
+          "TRI-3B709604",
+          "TRI-8CEE03CF"
+        ],
+        "steps": [
+          "Paso 1: El atacante explota la vulnerabilidad CVE-2026-31789 para obtener acceso al servidor",
+          "Paso 2: Con acceso obtenido, el atacante explota la vulnerabilidad CVE-2025-15467 para ejecutar código remoto sin autenticación",
+          "Paso 3: Resultado final: El atacante puede ejecutar código arbitrario en el servidor"
+        ],
+        "likelihood": "alta",
+        "combined_impact": "El impacto combinado de estas vulnerabilidades es crítico, ya que permite la ejecución remota de código sin autenticación"
+      }
+    ],
+    "conditions": [],
+    "remediation_priorities": [
+      {
+        "priority": 1,
+        "finding_id": "TRI-3B709604",
+        "action": "Actualizar libcrypto3 de 3.3.3-r0 a 3.3.7-r0",
+        "tool": "trivy",
+        "timeline": "inmediato",
+        "effort": "bajo",
+        "fix_available": true,
+        "fix_version": "3.3.7-r0"
+      },
+      {
+        "priority": 2,
+        "finding_id": "TRI-8CEE03CF",
+        "action": "Actualizar libcrypto3 de 3.3.3-r0 a 3.3.6-r0",
+        "tool": "trivy",
+        "timeline": "inmediato",
+        "effort": "bajo",
+        "fix_available": true,
+        "fix_version": "3.3.6-r0"
+      }
+    ],
+    "coverage_analysis": {
+      "sast_coverage": "buena",
+      "sca_coverage": "buena",
+      "dast_coverage": "parcial",
+      "pentest_coverage": "parcial",
+      "overall_coverage": "La cobertura general es buena, pero hay algunas áreas que requieren más atención",
+      "blind_spots": [
+        "Riesgo potencial no cubierto: Ataques de side-channel"
+      ]
+    },
+    "false_positive_estimate": "baja",
+    "false_positive_reasoning": "La mayoría de los hallazgos tienen un alto nivel de confianza y están respaldados por evidencia empírica",
+    "owasp_top10_present": [
+      "A06:2021 – Vulnerable and Outdated Components"
+    ],
+    "risk_score": 0.8,
+    "deploy_recommendation": "No se recomienda desplegar el sistema en producción hasta que se hayan abordado las vulnerabilidades críticas y altas identificadas"
+  },
+  "ssvc_enrichment": {
+    "used": true,
+    "action_counts": {
+      "Act": 67,
+      "Attend": 12,
+      "Track*": 40,
+      "Track": 8
+    },
+    "kev_entries": 1782,
+    "epss_fetched": 115,
+    "f1_metrics": {
+      "dimension": "Exploitation (active vs not_active)",
+      "ground_truth_source": "CISA KEV + EPSS ≥ 0.5",
+      "reference": "Al Haddad et al. (2025) – arXiv 2510.18508",
+      "cves_evaluated": 115,
+      "true_positives": 1,
+      "false_positives": 0,
+      "true_negatives": 114,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "accuracy": 1.0,
+      "note": "F1 calculado sobre la dimensión Exploitation del árbol SSVC. Solo CVEs con CISA KEV o EPSS disponible se incluyen en el cálculo. Hallazgos sin CVE ID (Semgrep/ZAP) se excluyen del cálculo formal."
+    },
+    "classified_count": 127
+  },
+  "prompt_version": "3.0-ssvc-enriched",
+  "_academic_reference": "Al Haddad et al. (2025) – arXiv 2510.18508",
+  "_academic_note": "Evaluación híbrida: LLM enriquecido con clasificaciones SSVC preliminares y datos empíricos EPSS/CISA KEV. El LLM puede validar o corregir las clasificaciones SSVC con razonamiento contextual."
+}

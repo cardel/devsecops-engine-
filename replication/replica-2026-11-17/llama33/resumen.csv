@@ -1,0 +1,8 @@
+caso,corrida,criticidad,unicos,critical,high,medium,semgrep,trivy,zap,nuclei,tradicional,ia,ia_confianza,ia_proveedor,ia_modelo,ia_tokens,ssvc,act,attend,track_star,track,cves,tp,fp,fn,tn,final,fuente_final
+dvwa,44169366558,high,430,65,180,165,19,386,17,8,FAIL,FAIL,0.9,openrouter,meta-llama/llama-3.3-70b-instruct,8955,FAIL,259,7,148,16,386,42,0,0,344,FAIL,ai_assisted
+fitfusion-backend,44169603311,high,127,7,56,56,0,117,6,4,FAIL,FAIL,0.9,openrouter,meta-llama/llama-3.3-70b-instruct,9999,FAIL,67,12,40,8,115,1,0,0,114,FAIL,ai_assisted
+juice-shop,44169406846,high,105,6,28,60,15,76,9,5,FAIL,FAIL,0.9,openrouter,meta-llama/llama-3.3-70b-instruct,9188,FAIL,35,8,44,18,71,0,0,0,71,FAIL,ai_assisted
+pygoat,44169484716,high,11004,87,2371,8532,21,10966,17,0,FAIL,FAIL,0.9,openrouter,meta-llama/llama-3.3-70b-instruct,9196,FAIL,2448,590,7930,36,10960,44,0,0,10916,FAIL,ai_assisted
+secure-task-api,44169524676,medium,52,1,25,23,0,48,3,1,FAIL,CONDITIONAL,0.8,openrouter,meta-llama/llama-3.3-70b-instruct,10048,FAIL,26,9,14,3,48,0,0,0,48,FAIL,ssvc_escalation_active_exploitation
+simple-health-api,44169564928,low,52,1,25,22,0,48,2,2,FAIL,CONDITIONAL,0.8,openrouter,meta-llama/llama-3.3-70b-instruct,9864,CONDITIONAL,0,28,8,16,48,0,0,0,48,CONDITIONAL,ai_assisted
+webgoat,44169445648,high,106,5,42,57,16,87,3,0,FAIL,FAIL,0.9,openrouter,meta-llama/llama-3.3-70b-instruct,9424,FAIL,51,17,31,7,87,12,0,0,75,FAIL,ai_assisted

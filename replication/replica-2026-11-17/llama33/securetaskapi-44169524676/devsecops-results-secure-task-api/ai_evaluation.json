@@ -1,0 +1,163 @@
+{
+  "schema_version": "3.0",
+  "generated_at": "2026-11-17T20:35:11.974859",
+  "findings_analyzed": 52,
+  "service": "secure-task-api",
+  "environment": "staging",
+  "business_criticality": "medium",
+  "ai_provider": "openrouter",
+  "ai_model": "meta-llama/llama-3.3-70b-instruct",
+  "tokens_used": {
+    "prompt": 8424,
+    "completion": 1624,
+    "total": 10048
+  },
+  "evaluation": {
+    "decision": "CONDITIONAL",
+    "confidence": 0.8,
+    "risk_level": "HIGH",
+    "summary": "Se han identificado varias vulnerabilidades de alta severidad en el pipeline de despliegue, principalmente relacionadas con componentes vulnerables y desactualizados. Aunque no se han encontrado exploits públicos para todas ellas, el riesgo potencial es significativo. Se recomienda mitigar estas vulnerabilidades antes de proceder con el despliegue.",
+    "reasoning": "El análisis ha revelado múltiples hallazgos críticos y altos, incluyendo CVE-2026-14456, CVE-2026-45447, y CVE-2026-107891, que afectan a componentes como OpenSSL, musl, y zlib. Aunque los scores EPSS son bajos para algunas de estas vulnerabilidades, su presencia en el sistema y la criticidad de los componentes afectados justifican una acción inmediata. La falta de exploits públicos conocidos para algunas de estas vulnerabilidades no descarta el riesgo, especialmente considerando la criticidad de los componentes involucrados y el potencial de ataques dirigidos.",
+    "ssvc_validation": [
+      {
+        "finding_id": "TRI-0542FEFE",
+        "title": "CVE-2026-14456 – openssl: OpenSSL: Denial of Service via unbounded memory growth in QUIC server",
+        "ssvc_preliminary": "Act",
+        "epss_score": 0.0073,
+        "in_kev": false,
+        "ai_assessment": "confirmed",
+        "reasoning": "Aunque el score EPSS es bajo, la criticidad del componente y el potencial impacto justifican considerar esta vulnerabilidad como confirmada."
+      },
+      {
+        "finding_id": "TRI-9B5681BF",
+        "title": "CVE-2026-45447 – openssl: Heap Use-After-Free in OpenSSL PKCS7_verify()",
+        "ssvc_preliminary": "Act",
+        "epss_score": 0.04,
+        "in_kev": false,
+        "ai_assessment": "confirmed",
+        "reasoning": "La presencia de un exploit de prueba (PoC) y el score EPSS ligeramente más alto que otros hallazgos similares justifican considerar esta vulnerabilidad como confirmada."
+      }
+    ],
+    "ssvc_context_used": true,
+    "key_findings": [
+      {
+        "title": "CVE-2026-14456 – openssl: OpenSSL: Denial of Service via unbounded memory growth in QUIC server",
+        "severity": "HIGH",
+        "cvss_score": 7.5,
+        "category": "A06:2021 – Vulnerable and Outdated Components",
+        "cwe": "CWE-400",
+        "exploitability": "alta",
+        "epss_informed": true,
+        "remote_exploitable": true,
+        "auth_required": false,
+        "public_exploit": false,
+        "why_important": "El componente OpenSSL es crítico para la seguridad de la aplicación, y una vulnerabilidad de denegación de servicio podría tener un impacto significativo en la disponibilidad del sistema.",
+        "business_impact": "Impacto en la disponibilidad y confiabilidad del servicio"
+      },
+      {
+        "title": "CVE-2026-45447 – openssl: Heap Use-After-Free in OpenSSL PKCS7_verify()",
+        "severity": "HIGH",
+        "cvss_score": 8.1,
+        "category": "A06:2021 – Vulnerable and Outdated Components",
+        "cwe": "CWE-416",
+        "exploitability": "alta",
+        "epss_informed": true,
+        "remote_exploitable": true,
+        "auth_required": false,
+        "public_exploit": false,
+        "why_important": "La vulnerabilidad de uso después de la liberación de memoria en OpenSSL podría permitir la ejecución de código arbitrario, lo que tendría un impacto crítico en la seguridad del sistema.",
+        "business_impact": "Impacto en la integridad y confidencialidad de los datos"
+      }
+    ],
+    "attack_chains": [
+      {
+        "chain_id": "CHAIN-001",
+        "title": "Explotación de vulnerabilidades en componentes para obtener acceso no autorizado",
+        "severity": "CRITICAL",
+        "finding_ids": [
+          "TRI-0542FEFE",
+          "TRI-9B5681BF"
+        ],
+        "steps": [
+          "Paso 1: Un atacante explota la vulnerabilidad CVE-2026-14456 para causar una denegación de servicio en el servidor QUIC.",
+          "Paso 2: Con el servicio QUIC comprometido, el atacante utiliza la vulnerabilidad CVE-2026-45447 para ejecutar código arbitrario en el sistema.",
+          "Paso 3: Resultado final: El atacante obtiene acceso no autorizado al sistema y puede realizar acciones maliciosas."
+        ],
+        "likelihood": "alta",
+        "combined_impact": "El impacto combinado de estas vulnerabilidades es crítico, ya que permite al atacante obtener acceso no autorizado al sistema y realizar acciones maliciosas."
+      }
+    ],
+    "conditions": [
+      "Mitigar las vulnerabilidades identificadas antes de proceder con el despliegue"
+    ],
+    "remediation_priorities": [
+      {
+        "priority": 1,
+        "finding_id": "TRI-0542FEFE",
+        "action": "Actualizar OpenSSL a la versión más reciente",
+        "tool": "trivy",
+        "timeline": "inmediato",
+        "effort": "bajo",
+        "fix_available": true,
+        "fix_version": "OpenSSL 3.5.8"
+      },
+      {
+        "priority": 2,
+        "finding_id": "TRI-9B5681BF",
+        "action": "Actualizar musl a la versión más reciente",
+        "tool": "trivy",
+        "timeline": "corto plazo",
+        "effort": "medio",
+        "fix_available": true,
+        "fix_version": "musl 1.2.7"
+      }
+    ],
+    "coverage_analysis": {
+      "sast_coverage": "buena",
+      "sca_coverage": "buena",
+      "dast_coverage": "parcial",
+      "pentest_coverage": "ninguna",
+      "overall_coverage": "La cobertura de las herramientas de seguridad es buena en general, pero hay áreas que requieren más atención.",
+      "blind_spots": [
+        "Falta de pruebas de penetración"
+      ]
+    },
+    "false_positive_estimate": "baja",
+    "false_positive_reasoning": "La mayoría de los hallazgos están respaldados por evidencia empírica y no se espera un alto nivel de falsos positivos.",
+    "owasp_top10_present": [
+      "A06:2021 – Vulnerable and Outdated Components"
+    ],
+    "risk_score": 0.7,
+    "deploy_recommendation": "Se recomienda mitigar las vulnerabilidades identificadas antes de proceder con el despliegue. La priorización de la remediación debe basarse en el riesgo real y el impacto potencial en el negocio."
+  },
+  "ssvc_enrichment": {
+    "used": true,
+    "action_counts": {
+      "Act": 26,
+      "Attend": 9,
+      "Track*": 14,
+      "Track": 3
+    },
+    "kev_entries": 1782,
+    "epss_fetched": 48,
+    "f1_metrics": {
+      "dimension": "Exploitation (active vs not_active)",
+      "ground_truth_source": "CISA KEV + EPSS ≥ 0.5",
+      "reference": "Al Haddad et al. (2025) – arXiv 2510.18508",
+      "cves_evaluated": 48,
+      "true_positives": 0,
+      "false_positives": 0,
+      "true_negatives": 48,
+      "false_negatives": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "accuracy": 1.0,
+      "note": "F1 calculado sobre la dimensión Exploitation del árbol SSVC. Solo CVEs con CISA KEV o EPSS disponible se incluyen en el cálculo. Hallazgos sin CVE ID (Semgrep/ZAP) se excluyen del cálculo formal."
+    },
+    "classified_count": 52
+  },
+  "prompt_version": "3.0-ssvc-enriched",
+  "_academic_reference": "Al Haddad et al. (2025) – arXiv 2510.18508",
+  "_academic_note": "Evaluación híbrida: LLM enriquecido con clasificaciones SSVC preliminares y datos empíricos EPSS/CISA KEV. El LLM puede validar o corregir las clasificaciones SSVC con razonamiento contextual."
+}

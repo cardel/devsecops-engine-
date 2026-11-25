@@ -1,0 +1,145 @@
+{
+  "schema_version": "3.0",
+  "generated_at": "2026-11-17T19:46:38.952789",
+  "findings_analyzed": 17,
+  "service": "simple-health-api",
+  "environment": "staging",
+  "business_criticality": "low",
+  "ai_provider": "openai",
+  "ai_model": "gpt-4o-mini",
+  "tokens_used": {
+    "prompt": 6684,
+    "completion": 1244,
+    "total": 7928
+  },
+  "evaluation": {
+    "decision": "FAIL",
+    "confidence": 0.85,
+    "risk_level": "HIGH",
+    "summary": "El análisis de seguridad del servicio simple-health-api revela múltiples vulnerabilidades críticas y altas que son explotables en el contexto actual. A pesar de que la criticidad de negocio es baja, la presencia de vulnerabilidades con un EPSS significativo y la posibilidad de explotación remota justifican una decisión de no despliegue.",
+    "reasoning": "Se identificaron 11 hallazgos de alta severidad, de los cuales varios tienen un EPSS superior a 0.01, indicando una probabilidad de explotación. Por ejemplo, CVE-2025-64756 presenta un EPSS de 0.031, lo que sugiere que es probable que sea explotable. Además, la mayoría de las vulnerabilidades están relacionadas con componentes desactualizados, lo que aumenta el riesgo de explotación. La combinación de estas vulnerabilidades puede permitir ataques más complejos.",
+    "ssvc_validation": [
+      {
+        "finding_id": "TRI-E8929BCB",
+        "title": "CVE-2024-21538 – cross-spawn: regular expression denial of service",
+        "ssvc_preliminary": "Attend",
+        "epss_score": 0.009,
+        "in_kev": false,
+        "ai_assessment": "overestimated",
+        "reasoning": "Aunque la clasificación SSVC es 'Attend', el EPSS bajo y la ausencia en KEV sugieren que la explotación activa es poco probable, lo que indica una sobreestimación de riesgo."
+      },
+      {
+        "finding_id": "TRI-CD8B31C7",
+        "title": "CVE-2025-64756 – glob: glob: Command Injection Vulnerability via Malicious Filenames",
+        "ssvc_preliminary": "Attend",
+        "epss_score": 0.0309,
+        "in_kev": false,
+        "ai_assessment": "confirmed",
+        "reasoning": "El EPSS indica una probabilidad de explotación, y la naturaleza de la vulnerabilidad permite la ejecución de comandos arbitrarios, lo que la hace crítica."
+      },
+      {
+        "finding_id": "TRI-4DBC63E3",
+        "title": "CVE-2026-26996 – minimatch: minimatch: Denial of Service via specially crafted glob patterns",
+        "ssvc_preliminary": "Attend",
+        "epss_score": 0.0057,
+        "in_kev": false,
+        "ai_assessment": "overestimated",
+        "reasoning": "El EPSS bajo y la falta de KEV sugieren que esta vulnerabilidad puede no ser tan crítica como se clasifica."
+      }
+    ],
+    "ssvc_context_used": true,
+    "key_findings": [
+      {
+        "title": "CVE-2025-64756 – glob: glob: Command Injection Vulnerability via Malicious Filenames",
+        "severity": "HIGH",
+        "cvss_score": 7.5,
+        "category": "A06:2021 – Vulnerable and Outdated Components",
+        "cwe": null,
+        "exploitability": "alta",
+        "epss_informed": true,
+        "remote_exploitable": true,
+        "auth_required": false,
+        "public_exploit": true,
+        "why_important": "Permite la ejecución de comandos arbitrarios, lo que puede comprometer la integridad del sistema.",
+        "business_impact": "Un ataque exitoso podría resultar en la pérdida de datos sensibles y daños a la reputación."
+      }
+    ],
+    "attack_chains": [
+      {
+        "chain_id": "CHAIN-001",
+        "title": "Explotación de vulnerabilidades de inyección de comandos",
+        "severity": "HIGH",
+        "finding_ids": [
+          "TRI-CD8B31C7"
+        ],
+        "steps": [
+          "Paso 1: Un atacante envía un archivo con un nombre malicioso que activa la vulnerabilidad CVE-2025-64756.",
+          "Paso 2: El sistema ejecuta comandos arbitrarios debido a la inyección de comandos.",
+          "Paso 3: El atacante obtiene acceso no autorizado al sistema, comprometiendo datos sensibles."
+        ],
+        "likelihood": "alta",
+        "combined_impact": "La explotación de esta vulnerabilidad puede llevar a una violación de datos y a la pérdida de confianza del cliente."
+      }
+    ],
+    "conditions": [],
+    "remediation_priorities": [
+      {
+        "priority": 1,
+        "finding_id": "TRI-CD8B31C7",
+        "action": "Actualizar glob de 10.4.2 a 11.1.0, 10.5.0",
+        "tool": "trivy",
+        "timeline": "inmediato",
+        "effort": "bajo",
+        "fix_available": true,
+        "fix_version": "11.1.0"
+      }
+    ],
+    "coverage_analysis": {
+      "sast_coverage": "buena",
+      "sca_coverage": "buena",
+      "dast_coverage": "parcial",
+      "pentest_coverage": "parcial",
+      "overall_coverage": "parcial",
+      "blind_spots": [
+        "Vulnerabilidades en configuraciones de seguridad de la API"
+      ]
+    },
+    "false_positive_estimate": "media",
+    "false_positive_reasoning": "Algunas vulnerabilidades pueden ser dependencias desactualizadas sin impacto real en el entorno de producción.",
+    "owasp_top10_present": [
+      "A06:2021 – Vulnerable and Outdated Components"
+    ],
+    "risk_score": 0.0,
+    "deploy_recommendation": "No desplegar hasta que se aborden las vulnerabilidades críticas y altas identificadas."
+  },
+  "ssvc_enrichment": {
+    "used": true,
+    "action_counts": {
+      "Act": 0,
+      "Attend": 13,
+      "Track*": 1,
+      "Track": 3
+    },
+    "kev_entries": 1782,
+    "epss_fetched": 13,
+    "f1_metrics": {
+      "dimension": "Exploitation (active vs not_active)",
+      "ground_truth_source": "CISA KEV + EPSS ≥ 0.5",
+      "reference": "Al Haddad et al. (2025) – arXiv 2510.18508",
+      "cves_evaluated": 13,
+      "true_positives": 0,
+      "false_positives": 0,
+      "true_negatives": 13,
+      "false_negatives": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "accuracy": 1.0,
+      "note": "F1 calculado sobre la dimensión Exploitation del árbol SSVC. Solo CVEs con CISA KEV o EPSS disponible se incluyen en el cálculo. Hallazgos sin CVE ID (Semgrep/ZAP) se excluyen del cálculo formal."
+    },
+    "classified_count": 17
+  },
+  "prompt_version": "3.0-ssvc-enriched",
+  "_academic_reference": "Al Haddad et al. (2025) – arXiv 2510.18508",
+  "_academic_note": "Evaluación híbrida: LLM enriquecido con clasificaciones SSVC preliminares y datos empíricos EPSS/CISA KEV. El LLM puede validar o corregir las clasificaciones SSVC con razonamiento contextual."
+}

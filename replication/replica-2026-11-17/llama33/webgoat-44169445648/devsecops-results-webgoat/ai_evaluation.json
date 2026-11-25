@@ -1,0 +1,162 @@
+{
+  "schema_version": "3.0",
+  "generated_at": "2026-11-17T20:34:00.444049",
+  "findings_analyzed": 106,
+  "service": "webgoat",
+  "environment": "staging",
+  "business_criticality": "high",
+  "ai_provider": "openrouter",
+  "ai_model": "meta-llama/llama-3.3-70b-instruct",
+  "tokens_used": {
+    "prompt": 7924,
+    "completion": 1500,
+    "total": 9424
+  },
+  "evaluation": {
+    "decision": "FAIL",
+    "confidence": 0.9,
+    "risk_level": "CRITICAL",
+    "summary": "Se han identificado varias vulnerabilidades críticas y altas en el código y dependencias del proyecto webgoat, incluyendo inyecciones SQL y componentes vulnerables, que podrían permitir la ejecución remota de código y el acceso no autorizado a datos sensibles. Es crucial abordar estas vulnerabilidades antes de proceder con el despliegue.",
+    "reasoning": "El análisis ha revelado múltiples hallazgos críticos y altos, incluyendo CVE-2026-111497, que tiene un puntaje EPSS de 0.8264 y está incluido en el listado de vulnerabilidades conocidas por CISA (KEV), indicando una alta probabilidad de explotación. Además, se han detectado varias inyecciones SQL y vulnerabilidades de configuración de seguridad que podrían ser explotadas remotamente sin autenticación.",
+    "ssvc_validation": [
+      {
+        "finding_id": "SEM-1557C43F",
+        "title": "Tainted Sql String",
+        "ssvc_preliminary": "Act",
+        "epss_score": 0.0,
+        "in_kev": false,
+        "ai_assessment": "overestimated",
+        "reasoning": "Aunque el hallazgo tiene una clasificación SSVC de Act, el EPSS es 0.0 y no está en KEV, lo que sugiere una posible sobreestimación."
+      },
+      {
+        "finding_id": "TRI-C4C5C885",
+        "title": "CVE-2026-111497 – brotli: Out-of-Bounds Write in Google Brotli Decoder",
+        "ssvc_preliminary": "Act",
+        "epss_score": 0.8264,
+        "in_kev": true,
+        "ai_assessment": "confirmed",
+        "reasoning": "La alta puntuación EPSS y su inclusión en KEV confirman la clasificación SSVC de Act para esta vulnerabilidad."
+      }
+    ],
+    "ssvc_context_used": true,
+    "key_findings": [
+      {
+        "title": "CVE-2026-111497 – brotli: Out-of-Bounds Write in Google Brotli Decoder",
+        "severity": "CRITICAL",
+        "cvss_score": 9.8,
+        "category": "A06:2021 – Vulnerable and Outdated Components",
+        "cwe": null,
+        "exploitability": "alta",
+        "epss_informed": true,
+        "remote_exploitable": true,
+        "auth_required": false,
+        "public_exploit": true,
+        "why_important": "Permite la ejecución remota de código y es explotable sin autenticación.",
+        "business_impact": "Puede llevar a una violación de datos y comprometer la integridad del sistema."
+      },
+      {
+        "title": "Tainted Sql String",
+        "severity": "HIGH",
+        "cvss_score": null,
+        "category": "A03:2021 – Injection",
+        "cwe": "CWE-89",
+        "exploitability": "media",
+        "epss_informed": true,
+        "remote_exploitable": true,
+        "auth_required": false,
+        "public_exploit": true,
+        "why_important": "Puede permitir la inyección de código SQL y el acceso no autorizado a la base de datos.",
+        "business_impact": "Puede resultar en la pérdida de datos confidenciales y daños a la reputación."
+      }
+    ],
+    "attack_chains": [
+      {
+        "chain_id": "CHAIN-001",
+        "title": "Explotación de vulnerabilidades para acceso no autorizado",
+        "severity": "CRITICAL",
+        "finding_ids": [
+          "TRI-C4C5C885",
+          "SEM-1557C43F"
+        ],
+        "steps": [
+          "Paso 1: El atacante explota CVE-2026-111497 para ejecutar código remoto.",
+          "Paso 2: Con acceso obtenido, utiliza la inyección SQL para acceder a la base de datos.",
+          "Paso 3: Resultado final: Acceso no autorizado a datos sensibles y posible violación de datos."
+        ],
+        "likelihood": "alta",
+        "combined_impact": "El impacto combinado es crítico, ya que permite el acceso no autorizado y la ejecución remota de código."
+      }
+    ],
+    "conditions": [],
+    "remediation_priorities": [
+      {
+        "priority": 1,
+        "finding_id": "TRI-C4C5C885",
+        "action": "Actualizar libbrotli1 de 1.1.0-2build2 a 1.1.0-2ubuntu0.1",
+        "tool": "trivy",
+        "timeline": "inmediato",
+        "effort": "bajo",
+        "fix_available": true,
+        "fix_version": "1.1.0-2ubuntu0.1"
+      },
+      {
+        "priority": 2,
+        "finding_id": "SEM-1557C43F",
+        "action": "Revisar y corregir el patrón identificado en source_to_scan/src/main/java/org/owasp/webgoat/lessons/challenges/challenge5/Assignment5.java:45",
+        "tool": "semgrep",
+        "timeline": "corto plazo",
+        "effort": "medio",
+        "fix_available": true,
+        "fix_version": null
+      }
+    ],
+    "coverage_analysis": {
+      "sast_coverage": "buena",
+      "sca_coverage": "buena",
+      "dast_coverage": "parcial",
+      "pentest_coverage": "ninguna",
+      "overall_coverage": "La cobertura es buena para SAST y SCA, pero parcial para DAST y no hay cobertura para pentesting.",
+      "blind_spots": [
+        "Riesgo de ataques de denegación de servicio"
+      ]
+    },
+    "false_positive_estimate": "baja",
+    "false_positive_reasoning": "La mayoría de los hallazgos están respaldados por evidencia empírica de EPSS y KEV, lo que reduce la probabilidad de falsos positivos.",
+    "owasp_top10_present": [
+      "A06:2021 – Vulnerable and Outdated Components",
+      "A03:2021 – Injection"
+    ],
+    "risk_score": 0.85,
+    "deploy_recommendation": "No se recomienda el despliegue hasta que se aborden las vulnerabilidades críticas y altas identificadas."
+  },
+  "ssvc_enrichment": {
+    "used": true,
+    "action_counts": {
+      "Act": 51,
+      "Attend": 17,
+      "Track*": 31,
+      "Track": 7
+    },
+    "kev_entries": 1782,
+    "epss_fetched": 86,
+    "f1_metrics": {
+      "dimension": "Exploitation (active vs not_active)",
+      "ground_truth_source": "CISA KEV + EPSS ≥ 0.5",
+      "reference": "Al Haddad et al. (2025) – arXiv 2510.18508",
+      "cves_evaluated": 87,
+      "true_positives": 12,
+      "false_positives": 0,
+      "true_negatives": 75,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "accuracy": 1.0,
+      "note": "F1 calculado sobre la dimensión Exploitation del árbol SSVC. Solo CVEs con CISA KEV o EPSS disponible se incluyen en el cálculo. Hallazgos sin CVE ID (Semgrep/ZAP) se excluyen del cálculo formal."
+    },
+    "classified_count": 106
+  },
+  "prompt_version": "3.0-ssvc-enriched",
+  "_academic_reference": "Al Haddad et al. (2025) – arXiv 2510.18508",
+  "_academic_note": "Evaluación híbrida: LLM enriquecido con clasificaciones SSVC preliminares y datos empíricos EPSS/CISA KEV. El LLM puede validar o corregir las clasificaciones SSVC con razonamiento contextual."
+}

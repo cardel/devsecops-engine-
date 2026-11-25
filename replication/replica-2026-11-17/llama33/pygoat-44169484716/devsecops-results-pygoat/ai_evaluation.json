@@ -1,0 +1,162 @@
+{
+  "schema_version": "3.0",
+  "generated_at": "2026-11-17T20:34:08.155780",
+  "findings_analyzed": 11004,
+  "service": "pygoat",
+  "environment": "staging",
+  "business_criticality": "high",
+  "ai_provider": "openrouter",
+  "ai_model": "meta-llama/llama-3.3-70b-instruct",
+  "tokens_used": {
+    "prompt": 7719,
+    "completion": 1477,
+    "total": 9196
+  },
+  "evaluation": {
+    "decision": "FAIL",
+    "confidence": 0.9,
+    "risk_level": "CRITICAL",
+    "summary": "Se han identificado varias vulnerabilidades críticas y altas en el pipeline de DevSecOps, incluyendo inyecciones de comandos y vulnerabilidades en componentes desactualizados. Estas vulnerabilidades podrían permitir a un atacante ejecutar código arbitrario en el servidor o acceder a datos sensibles.",
+    "reasoning": "El análisis ha revelado que varias de las vulnerabilidades identificadas tienen un alto nivel de explotabilidad, según los scores EPSS y la presencia en la lista KEV. Además, se han detectado cadenas de ataque que podrían permitir a un atacante explotar múltiples vulnerabilidades para lograr un acceso no autorizado o ejecutar código malicioso.",
+    "ssvc_validation": [
+      {
+        "finding_id": "SEM-B5D49B50",
+        "title": "Subprocess Injection",
+        "ssvc_preliminary": "Act",
+        "epss_score": 0.0,
+        "in_kev": false,
+        "ai_assessment": "confirmed",
+        "reasoning": "La vulnerabilidad de inyección de comandos es crítica y tiene un alto nivel de explotabilidad, según el score EPSS y la falta de presencia en la lista KEV no descarta su importancia."
+      },
+      {
+        "finding_id": "TRI-83E0FAD3",
+        "title": "CVE-2026-109518",
+        "ssvc_preliminary": "Act",
+        "epss_score": 0.0093,
+        "in_kev": false,
+        "ai_assessment": "confirmed",
+        "reasoning": "La vulnerabilidad en el componente 'apt' es crítica y tiene un score EPSS significativo, lo que indica una alta probabilidad de explotación."
+      }
+    ],
+    "ssvc_context_used": true,
+    "key_findings": [
+      {
+        "title": "Subprocess Injection",
+        "severity": "CRITICAL",
+        "cvss_score": null,
+        "category": "A03:2021 – Injection",
+        "cwe": "CWE-78",
+        "exploitability": "alta",
+        "epss_informed": true,
+        "remote_exploitable": true,
+        "auth_required": false,
+        "public_exploit": true,
+        "why_important": "Permite a un atacante ejecutar código arbitrario en el servidor",
+        "business_impact": "Pérdida de integridad y confidencialidad de los datos"
+      },
+      {
+        "title": "CVE-2026-109518",
+        "severity": "CRITICAL",
+        "cvss_score": 8.1,
+        "category": "A06:2021 – Vulnerable and Outdated Components",
+        "cwe": null,
+        "exploitability": "alta",
+        "epss_informed": true,
+        "remote_exploitable": true,
+        "auth_required": false,
+        "public_exploit": true,
+        "why_important": "Permite a un atacante ejecutar código arbitrario en el servidor",
+        "business_impact": "Pérdida de integridad y confidencialidad de los datos"
+      }
+    ],
+    "attack_chains": [
+      {
+        "chain_id": "CHAIN-001",
+        "title": "Inyección de comandos y ejecución de código malicioso",
+        "severity": "CRITICAL",
+        "finding_ids": [
+          "SEM-B5D49B50",
+          "TRI-83E0FAD3"
+        ],
+        "steps": [
+          "Paso 1: El atacante explota la vulnerabilidad de inyección de comandos para ejecutar código arbitrario en el servidor",
+          "Paso 2: El atacante utiliza la vulnerabilidad en el componente 'apt' para descargar y ejecutar código malicioso",
+          "Paso 3: Resultado final: El atacante logra ejecutar código malicioso en el servidor y acceder a datos sensibles"
+        ],
+        "likelihood": "alta",
+        "combined_impact": "El impacto combinado de estas vulnerabilidades es crítico, ya que permiten a un atacante ejecutar código arbitrario en el servidor y acceder a datos sensibles"
+      }
+    ],
+    "conditions": [],
+    "remediation_priorities": [
+      {
+        "priority": 1,
+        "finding_id": "SEM-B5D49B50",
+        "action": "Revisar y corregir el patrón identificado en source_to_scan/challenge/views.py:81",
+        "tool": "semgrep",
+        "timeline": "inmediato",
+        "effort": "alto",
+        "fix_available": true,
+        "fix_version": null
+      },
+      {
+        "priority": 2,
+        "finding_id": "TRI-83E0FAD3",
+        "action": "Actualizar bind9-dnsutils de 1:9.16.27-1~deb11u1 a 1:9.16.33-1~deb11u1",
+        "tool": "trivy",
+        "timeline": "corto plazo",
+        "effort": "medio",
+        "fix_available": true,
+        "fix_version": "1:9.16.33-1~deb11u1"
+      }
+    ],
+    "coverage_analysis": {
+      "sast_coverage": "buena",
+      "sca_coverage": "buena",
+      "dast_coverage": "parcial",
+      "pentest_coverage": "ninguna",
+      "overall_coverage": "La cobertura es buena para SAST y SCA, pero parcial para DAST y no hay cobertura para pentesting",
+      "blind_spots": [
+        "Riesgo potencial no cubierto: Ataques de denegación de servicio"
+      ]
+    },
+    "false_positive_estimate": "baja",
+    "false_positive_reasoning": "La mayoría de las vulnerabilidades identificadas tienen un alto nivel de explotabilidad y son confirmadas por el score EPSS y la presencia en la lista KEV",
+    "owasp_top10_present": [
+      "A03:2021 – Injection",
+      "A06:2021 – Vulnerable and Outdated Components"
+    ],
+    "risk_score": 0.85,
+    "deploy_recommendation": "No se recomienda desplegar el pipeline en su estado actual debido a la presencia de vulnerabilidades críticas y altas que podrían ser explotadas por un atacante"
+  },
+  "ssvc_enrichment": {
+    "used": true,
+    "action_counts": {
+      "Act": 2448,
+      "Attend": 590,
+      "Track*": 7930,
+      "Track": 36
+    },
+    "kev_entries": 1782,
+    "epss_fetched": 10948,
+    "f1_metrics": {
+      "dimension": "Exploitation (active vs not_active)",
+      "ground_truth_source": "CISA KEV + EPSS ≥ 0.5",
+      "reference": "Al Haddad et al. (2025) – arXiv 2510.18508",
+      "cves_evaluated": 10960,
+      "true_positives": 44,
+      "false_positives": 0,
+      "true_negatives": 10916,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "accuracy": 1.0,
+      "note": "F1 calculado sobre la dimensión Exploitation del árbol SSVC. Solo CVEs con CISA KEV o EPSS disponible se incluyen en el cálculo. Hallazgos sin CVE ID (Semgrep/ZAP) se excluyen del cálculo formal."
+    },
+    "classified_count": 11004
+  },
+  "prompt_version": "3.0-ssvc-enriched",
+  "_academic_reference": "Al Haddad et al. (2025) – arXiv 2510.18508",
+  "_academic_note": "Evaluación híbrida: LLM enriquecido con clasificaciones SSVC preliminares y datos empíricos EPSS/CISA KEV. El LLM puede validar o corregir las clasificaciones SSVC con razonamiento contextual."
+}

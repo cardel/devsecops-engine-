@@ -1,0 +1,161 @@
+{
+  "schema_version": "3.0",
+  "generated_at": "2026-11-17T19:55:02.755033",
+  "findings_analyzed": 126,
+  "service": "fitfusion-backend",
+  "environment": "staging",
+  "business_criticality": "high",
+  "ai_provider": "openai",
+  "ai_model": "gpt-4o-mini",
+  "tokens_used": {
+    "prompt": 8449,
+    "completion": 1549,
+    "total": 9998
+  },
+  "evaluation": {
+    "decision": "FAIL",
+    "confidence": 0.9,
+    "risk_level": "CRITICAL",
+    "summary": "El análisis de seguridad del servicio fitfusion-backend revela múltiples vulnerabilidades críticas y altas, algunas de las cuales son explotables remotamente. La presencia de vulnerabilidades con un alto potencial de explotación, como CVE-2025-15467, justifica la decisión de no permitir el despliegue en el entorno de staging.",
+    "reasoning": "Se identificaron varias vulnerabilidades críticas y altas, como CVE-2025-15467, que tiene un EPSS de 0.748, indicando una alta probabilidad de explotación activa. Además, la mayoría de las vulnerabilidades están relacionadas con componentes vulnerables y desactualizados, lo que aumenta el riesgo de un ataque exitoso. La combinación de estas vulnerabilidades puede permitir a un atacante ejecutar código arbitrario o causar una denegación de servicio, lo que representa un riesgo significativo para la integridad y disponibilidad del servicio.",
+    "ssvc_validation": [
+      {
+        "finding_id": "TRI-3B709604",
+        "title": "CVE-2026-31789 – openssl: OpenSSL: Heap buffer overflow on 32-bit systems from large X.509 certificate processing",
+        "ssvc_preliminary": "Act",
+        "epss_score": 0.0025,
+        "in_kev": false,
+        "ai_assessment": "overestimated",
+        "reasoning": "Aunque clasificada como 'Act', el EPSS de 0.0025 sugiere que la explotación activa es poco probable en este contexto, lo que indica una posible sobreestimación basada en heurísticas CWE."
+      },
+      {
+        "finding_id": "TRI-8CEE03CF",
+        "title": "CVE-2025-15467 – openssl: OpenSSL: Remote code execution or Denial of Service via oversized Initialization Vector in CMS parsing",
+        "ssvc_preliminary": "Act",
+        "epss_score": 0.7479,
+        "in_kev": false,
+        "ai_assessment": "confirmed",
+        "reasoning": "La alta puntuación de EPSS confirma que esta vulnerabilidad es explotable activamente, lo que justifica su clasificación como 'Act'."
+      }
+    ],
+    "ssvc_context_used": true,
+    "key_findings": [
+      {
+        "title": "CVE-2025-15467 – openssl: OpenSSL: Remote code execution or Denial of Service via oversized Initialization Vector in CMS parsing",
+        "severity": "HIGH",
+        "cvss_score": 9.8,
+        "category": "A06:2021 – Vulnerable and Outdated Components",
+        "cwe": null,
+        "exploitability": "alta",
+        "epss_informed": true,
+        "remote_exploitable": true,
+        "auth_required": false,
+        "public_exploit": true,
+        "why_important": "Esta vulnerabilidad permite la ejecución remota de código, lo que puede comprometer completamente el servicio.",
+        "business_impact": "Un ataque exitoso podría resultar en la pérdida de datos sensibles y la interrupción del servicio, afectando la reputación y la confianza del cliente."
+      },
+      {
+        "title": "CVE-2026-28387 – openssl: OpenSSL: Arbitrary code execution due to use-after-free in DANE TLSA authentication",
+        "severity": "HIGH",
+        "cvss_score": 8.1,
+        "category": "A06:2021 – Vulnerable and Outdated Components",
+        "cwe": null,
+        "exploitability": "alta",
+        "epss_informed": true,
+        "remote_exploitable": true,
+        "auth_required": false,
+        "public_exploit": true,
+        "why_important": "Permite la ejecución de código arbitrario, lo que puede ser utilizado para comprometer el sistema.",
+        "business_impact": "Puede llevar a la pérdida de datos y a la interrupción del servicio, afectando la continuidad del negocio."
+      }
+    ],
+    "attack_chains": [
+      {
+        "chain_id": "CHAIN-001",
+        "title": "Explotación de vulnerabilidades en OpenSSL para ejecución remota de código",
+        "severity": "CRITICAL",
+        "finding_ids": [
+          "TRI-8CEE03CF",
+          "TRI-2CC89627"
+        ],
+        "steps": [
+          "Paso 1: El atacante envía un mensaje CMS malicioso que explota CVE-2025-15467 para provocar un desbordamiento de búfer.",
+          "Paso 2: Con el acceso obtenido, el atacante utiliza CVE-2026-28387 para ejecutar código arbitrario en el servidor.",
+          "Paso 3: Resultado final: El atacante obtiene control total sobre el servidor, comprometiendo datos sensibles y la disponibilidad del servicio."
+        ],
+        "likelihood": "alta",
+        "combined_impact": "La combinación de estas vulnerabilidades permite un ataque devastador que puede resultar en la pérdida de datos y la interrupción del servicio."
+      }
+    ],
+    "conditions": [],
+    "remediation_priorities": [
+      {
+        "priority": 1,
+        "finding_id": "TRI-8CEE03CF",
+        "action": "Actualizar libcrypto3 de 3.3.3-r0 a 3.3.6-r0 para mitigar la vulnerabilidad de ejecución remota de código.",
+        "tool": "trivy",
+        "timeline": "inmediato",
+        "effort": "bajo",
+        "fix_available": true,
+        "fix_version": "3.3.6-r0"
+      },
+      {
+        "priority": 2,
+        "finding_id": "TRI-2CC89627",
+        "action": "Actualizar libcrypto3 de 3.3.3-r0 a 3.3.7-r0 para mitigar la vulnerabilidad de uso después de liberar.",
+        "tool": "trivy",
+        "timeline": "inmediato",
+        "effort": "bajo",
+        "fix_available": true,
+        "fix_version": "3.3.7-r0"
+      }
+    ],
+    "coverage_analysis": {
+      "sast_coverage": "buena",
+      "sca_coverage": "buena",
+      "dast_coverage": "parcial",
+      "pentest_coverage": "parcial",
+      "overall_coverage": "La cobertura general es adecuada, pero se deben realizar pruebas adicionales para asegurar la seguridad.",
+      "blind_spots": [
+        "Vulnerabilidades en configuraciones específicas de producción que no se han evaluado."
+      ]
+    },
+    "false_positive_estimate": "baja",
+    "false_positive_reasoning": "Las vulnerabilidades identificadas son críticas y están respaldadas por datos de EPSS, lo que sugiere que son reales y no falsos positivos.",
+    "owasp_top10_present": [
+      "A06:2021 – Vulnerable and Outdated Components"
+    ],
+    "risk_score": 0.0,
+    "deploy_recommendation": "No se recomienda el despliegue hasta que se aborden las vulnerabilidades críticas y altas identificadas."
+  },
+  "ssvc_enrichment": {
+    "used": true,
+    "action_counts": {
+      "Act": 66,
+      "Attend": 12,
+      "Track*": 40,
+      "Track": 8
+    },
+    "kev_entries": 1782,
+    "epss_fetched": 114,
+    "f1_metrics": {
+      "dimension": "Exploitation (active vs not_active)",
+      "ground_truth_source": "CISA KEV + EPSS ≥ 0.5",
+      "reference": "Al Haddad et al. (2025) – arXiv 2510.18508",
+      "cves_evaluated": 114,
+      "true_positives": 1,
+      "false_positives": 0,
+      "true_negatives": 113,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "accuracy": 1.0,
+      "note": "F1 calculado sobre la dimensión Exploitation del árbol SSVC. Solo CVEs con CISA KEV o EPSS disponible se incluyen en el cálculo. Hallazgos sin CVE ID (Semgrep/ZAP) se excluyen del cálculo formal."
+    },
+    "classified_count": 126
+  },
+  "prompt_version": "3.0-ssvc-enriched",
+  "_academic_reference": "Al Haddad et al. (2025) – arXiv 2510.18508",
+  "_academic_note": "Evaluación híbrida: LLM enriquecido con clasificaciones SSVC preliminares y datos empíricos EPSS/CISA KEV. El LLM puede validar o corregir las clasificaciones SSVC con razonamiento contextual."
+}

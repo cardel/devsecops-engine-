@@ -1,0 +1,736 @@
+caso,riesgo,critical,high,medium,fuente,critical_min,high_min,medium_min,base,decision,cambia
+Juice Shop,alto,4,38,36,findings.json,1,1,10,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,1,1,20,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,1,1,50,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,1,1,100,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,1,1,sin_limite,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,1,5,10,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,1,5,20,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,1,5,50,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,1,5,100,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,1,5,sin_limite,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,1,10,10,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,1,10,20,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,1,10,50,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,1,10,100,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,1,10,sin_limite,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,1,15,10,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,1,15,20,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,1,15,50,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,1,15,100,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,1,15,sin_limite,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,1,20,10,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,1,20,20,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,1,20,50,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,1,20,100,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,1,20,sin_limite,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,1,50,10,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,1,50,20,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,1,50,50,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,1,50,100,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,1,50,sin_limite,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,1,100,10,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,1,100,20,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,1,100,50,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,1,100,100,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,1,100,sin_limite,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,2,1,10,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,2,1,20,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,2,1,50,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,2,1,100,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,2,1,sin_limite,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,2,5,10,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,2,5,20,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,2,5,50,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,2,5,100,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,2,5,sin_limite,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,2,10,10,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,2,10,20,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,2,10,50,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,2,10,100,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,2,10,sin_limite,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,2,15,10,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,2,15,20,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,2,15,50,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,2,15,100,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,2,15,sin_limite,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,2,20,10,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,2,20,20,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,2,20,50,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,2,20,100,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,2,20,sin_limite,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,2,50,10,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,2,50,20,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,2,50,50,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,2,50,100,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,2,50,sin_limite,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,2,100,10,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,2,100,20,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,2,100,50,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,2,100,100,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,2,100,sin_limite,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,5,1,10,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,5,1,20,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,5,1,50,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,5,1,100,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,5,1,sin_limite,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,5,5,10,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,5,5,20,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,5,5,50,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,5,5,100,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,5,5,sin_limite,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,5,10,10,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,5,10,20,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,5,10,50,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,5,10,100,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,5,10,sin_limite,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,5,15,10,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,5,15,20,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,5,15,50,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,5,15,100,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,5,15,sin_limite,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,5,20,10,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,5,20,20,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,5,20,50,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,5,20,100,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,5,20,sin_limite,FAIL,FAIL,0
+Juice Shop,alto,4,38,36,findings.json,5,50,10,FAIL,CONDITIONAL,1
+Juice Shop,alto,4,38,36,findings.json,5,50,20,FAIL,CONDITIONAL,1
+Juice Shop,alto,4,38,36,findings.json,5,50,50,FAIL,PASS,1
+Juice Shop,alto,4,38,36,findings.json,5,50,100,FAIL,PASS,1
+Juice Shop,alto,4,38,36,findings.json,5,50,sin_limite,FAIL,PASS,1
+Juice Shop,alto,4,38,36,findings.json,5,100,10,FAIL,CONDITIONAL,1
+Juice Shop,alto,4,38,36,findings.json,5,100,20,FAIL,CONDITIONAL,1
+Juice Shop,alto,4,38,36,findings.json,5,100,50,FAIL,PASS,1
+Juice Shop,alto,4,38,36,findings.json,5,100,100,FAIL,PASS,1
+Juice Shop,alto,4,38,36,findings.json,5,100,sin_limite,FAIL,PASS,1
+FitFusion,alto,2,29,20,findings.json,1,1,10,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,1,1,20,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,1,1,50,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,1,1,100,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,1,1,sin_limite,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,1,5,10,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,1,5,20,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,1,5,50,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,1,5,100,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,1,5,sin_limite,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,1,10,10,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,1,10,20,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,1,10,50,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,1,10,100,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,1,10,sin_limite,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,1,15,10,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,1,15,20,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,1,15,50,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,1,15,100,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,1,15,sin_limite,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,1,20,10,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,1,20,20,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,1,20,50,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,1,20,100,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,1,20,sin_limite,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,1,50,10,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,1,50,20,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,1,50,50,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,1,50,100,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,1,50,sin_limite,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,1,100,10,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,1,100,20,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,1,100,50,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,1,100,100,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,1,100,sin_limite,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,2,1,10,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,2,1,20,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,2,1,50,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,2,1,100,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,2,1,sin_limite,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,2,5,10,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,2,5,20,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,2,5,50,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,2,5,100,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,2,5,sin_limite,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,2,10,10,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,2,10,20,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,2,10,50,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,2,10,100,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,2,10,sin_limite,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,2,15,10,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,2,15,20,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,2,15,50,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,2,15,100,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,2,15,sin_limite,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,2,20,10,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,2,20,20,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,2,20,50,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,2,20,100,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,2,20,sin_limite,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,2,50,10,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,2,50,20,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,2,50,50,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,2,50,100,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,2,50,sin_limite,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,2,100,10,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,2,100,20,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,2,100,50,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,2,100,100,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,2,100,sin_limite,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,5,1,10,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,5,1,20,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,5,1,50,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,5,1,100,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,5,1,sin_limite,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,5,5,10,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,5,5,20,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,5,5,50,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,5,5,100,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,5,5,sin_limite,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,5,10,10,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,5,10,20,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,5,10,50,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,5,10,100,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,5,10,sin_limite,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,5,15,10,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,5,15,20,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,5,15,50,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,5,15,100,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,5,15,sin_limite,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,5,20,10,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,5,20,20,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,5,20,50,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,5,20,100,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,5,20,sin_limite,FAIL,FAIL,0
+FitFusion,alto,2,29,20,findings.json,5,50,10,FAIL,CONDITIONAL,1
+FitFusion,alto,2,29,20,findings.json,5,50,20,FAIL,CONDITIONAL,1
+FitFusion,alto,2,29,20,findings.json,5,50,50,FAIL,PASS,1
+FitFusion,alto,2,29,20,findings.json,5,50,100,FAIL,PASS,1
+FitFusion,alto,2,29,20,findings.json,5,50,sin_limite,FAIL,PASS,1
+FitFusion,alto,2,29,20,findings.json,5,100,10,FAIL,CONDITIONAL,1
+FitFusion,alto,2,29,20,findings.json,5,100,20,FAIL,CONDITIONAL,1
+FitFusion,alto,2,29,20,findings.json,5,100,50,FAIL,PASS,1
+FitFusion,alto,2,29,20,findings.json,5,100,100,FAIL,PASS,1
+FitFusion,alto,2,29,20,findings.json,5,100,sin_limite,FAIL,PASS,1
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),1,1,10,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),1,1,20,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),1,1,50,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),1,1,100,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),1,1,sin_limite,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),1,5,10,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),1,5,20,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),1,5,50,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),1,5,100,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),1,5,sin_limite,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),1,10,10,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),1,10,20,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),1,10,50,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),1,10,100,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),1,10,sin_limite,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),1,15,10,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),1,15,20,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),1,15,50,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),1,15,100,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),1,15,sin_limite,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),1,20,10,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),1,20,20,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),1,20,50,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),1,20,100,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),1,20,sin_limite,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),1,50,10,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),1,50,20,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),1,50,50,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),1,50,100,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),1,50,sin_limite,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),1,100,10,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),1,100,20,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),1,100,50,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),1,100,100,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),1,100,sin_limite,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),2,1,10,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),2,1,20,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),2,1,50,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),2,1,100,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),2,1,sin_limite,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),2,5,10,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),2,5,20,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),2,5,50,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),2,5,100,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),2,5,sin_limite,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),2,10,10,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),2,10,20,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),2,10,50,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),2,10,100,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),2,10,sin_limite,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),2,15,10,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),2,15,20,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),2,15,50,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),2,15,100,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),2,15,sin_limite,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),2,20,10,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),2,20,20,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),2,20,50,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),2,20,100,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),2,20,sin_limite,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),2,50,10,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),2,50,20,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),2,50,50,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),2,50,100,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),2,50,sin_limite,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),2,100,10,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),2,100,20,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),2,100,50,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),2,100,100,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),2,100,sin_limite,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),5,1,10,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),5,1,20,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),5,1,50,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),5,1,100,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),5,1,sin_limite,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),5,5,10,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),5,5,20,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),5,5,50,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),5,5,100,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),5,5,sin_limite,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),5,10,10,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),5,10,20,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),5,10,50,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),5,10,100,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),5,10,sin_limite,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),5,15,10,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),5,15,20,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),5,15,50,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),5,15,100,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),5,15,sin_limite,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),5,20,10,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),5,20,20,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),5,20,50,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),5,20,100,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),5,20,sin_limite,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),5,50,10,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),5,50,20,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),5,50,50,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),5,50,100,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),5,50,sin_limite,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),5,100,10,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),5,100,20,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),5,100,50,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),5,100,100,FAIL,FAIL,0
+WebGoat,alto,9,55,,tab:consolidated (MEDIUM no disponible),5,100,sin_limite,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),1,1,10,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),1,1,20,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),1,1,50,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),1,1,100,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),1,1,sin_limite,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),1,5,10,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),1,5,20,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),1,5,50,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),1,5,100,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),1,5,sin_limite,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),1,10,10,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),1,10,20,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),1,10,50,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),1,10,100,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),1,10,sin_limite,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),1,15,10,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),1,15,20,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),1,15,50,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),1,15,100,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),1,15,sin_limite,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),1,20,10,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),1,20,20,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),1,20,50,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),1,20,100,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),1,20,sin_limite,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),1,50,10,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),1,50,20,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),1,50,50,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),1,50,100,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),1,50,sin_limite,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),1,100,10,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),1,100,20,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),1,100,50,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),1,100,100,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),1,100,sin_limite,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),2,1,10,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),2,1,20,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),2,1,50,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),2,1,100,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),2,1,sin_limite,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),2,5,10,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),2,5,20,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),2,5,50,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),2,5,100,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),2,5,sin_limite,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),2,10,10,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),2,10,20,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),2,10,50,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),2,10,100,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),2,10,sin_limite,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),2,15,10,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),2,15,20,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),2,15,50,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),2,15,100,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),2,15,sin_limite,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),2,20,10,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),2,20,20,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),2,20,50,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),2,20,100,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),2,20,sin_limite,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),2,50,10,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),2,50,20,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),2,50,50,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),2,50,100,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),2,50,sin_limite,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),2,100,10,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),2,100,20,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),2,100,50,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),2,100,100,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),2,100,sin_limite,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),5,1,10,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),5,1,20,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),5,1,50,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),5,1,100,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),5,1,sin_limite,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),5,5,10,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),5,5,20,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),5,5,50,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),5,5,100,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),5,5,sin_limite,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),5,10,10,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),5,10,20,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),5,10,50,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),5,10,100,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),5,10,sin_limite,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),5,15,10,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),5,15,20,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),5,15,50,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),5,15,100,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),5,15,sin_limite,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),5,20,10,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),5,20,20,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),5,20,50,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),5,20,100,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),5,20,sin_limite,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),5,50,10,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),5,50,20,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),5,50,50,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),5,50,100,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),5,50,sin_limite,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),5,100,10,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),5,100,20,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),5,100,50,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),5,100,100,FAIL,FAIL,0
+DVWA,alto,65,178,,tab:consolidated (MEDIUM no disponible),5,100,sin_limite,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),1,1,10,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),1,1,20,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),1,1,50,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),1,1,100,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),1,1,sin_limite,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),1,5,10,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),1,5,20,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),1,5,50,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),1,5,100,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),1,5,sin_limite,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),1,10,10,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),1,10,20,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),1,10,50,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),1,10,100,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),1,10,sin_limite,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),1,15,10,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),1,15,20,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),1,15,50,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),1,15,100,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),1,15,sin_limite,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),1,20,10,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),1,20,20,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),1,20,50,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),1,20,100,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),1,20,sin_limite,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),1,50,10,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),1,50,20,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),1,50,50,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),1,50,100,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),1,50,sin_limite,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),1,100,10,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),1,100,20,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),1,100,50,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),1,100,100,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),1,100,sin_limite,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),2,1,10,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),2,1,20,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),2,1,50,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),2,1,100,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),2,1,sin_limite,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),2,5,10,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),2,5,20,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),2,5,50,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),2,5,100,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),2,5,sin_limite,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),2,10,10,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),2,10,20,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),2,10,50,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),2,10,100,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),2,10,sin_limite,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),2,15,10,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),2,15,20,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),2,15,50,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),2,15,100,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),2,15,sin_limite,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),2,20,10,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),2,20,20,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),2,20,50,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),2,20,100,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),2,20,sin_limite,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),2,50,10,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),2,50,20,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),2,50,50,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),2,50,100,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),2,50,sin_limite,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),2,100,10,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),2,100,20,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),2,100,50,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),2,100,100,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),2,100,sin_limite,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),5,1,10,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),5,1,20,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),5,1,50,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),5,1,100,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),5,1,sin_limite,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),5,5,10,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),5,5,20,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),5,5,50,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),5,5,100,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),5,5,sin_limite,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),5,10,10,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),5,10,20,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),5,10,50,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),5,10,100,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),5,10,sin_limite,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),5,15,10,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),5,15,20,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),5,15,50,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),5,15,100,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),5,15,sin_limite,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),5,20,10,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),5,20,20,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),5,20,50,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),5,20,100,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),5,20,sin_limite,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),5,50,10,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),5,50,20,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),5,50,50,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),5,50,100,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),5,50,sin_limite,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),5,100,10,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),5,100,20,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),5,100,50,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),5,100,100,FAIL,FAIL,0
+PyGoat,alto,67,1703,,tab:consolidated (MEDIUM no disponible),5,100,sin_limite,FAIL,FAIL,0
+SecureTaskAPI,medio,0,11,3,findings.json,1,1,10,FAIL,FAIL,0
+SecureTaskAPI,medio,0,11,3,findings.json,1,1,20,FAIL,FAIL,0
+SecureTaskAPI,medio,0,11,3,findings.json,1,1,50,FAIL,FAIL,0
+SecureTaskAPI,medio,0,11,3,findings.json,1,1,100,FAIL,FAIL,0
+SecureTaskAPI,medio,0,11,3,findings.json,1,1,sin_limite,FAIL,FAIL,0
+SecureTaskAPI,medio,0,11,3,findings.json,1,5,10,FAIL,FAIL,0
+SecureTaskAPI,medio,0,11,3,findings.json,1,5,20,FAIL,FAIL,0
+SecureTaskAPI,medio,0,11,3,findings.json,1,5,50,FAIL,FAIL,0
+SecureTaskAPI,medio,0,11,3,findings.json,1,5,100,FAIL,FAIL,0
+SecureTaskAPI,medio,0,11,3,findings.json,1,5,sin_limite,FAIL,FAIL,0
+SecureTaskAPI,medio,0,11,3,findings.json,1,10,10,FAIL,FAIL,0
+SecureTaskAPI,medio,0,11,3,findings.json,1,10,20,FAIL,FAIL,0
+SecureTaskAPI,medio,0,11,3,findings.json,1,10,50,FAIL,FAIL,0
+SecureTaskAPI,medio,0,11,3,findings.json,1,10,100,FAIL,FAIL,0
+SecureTaskAPI,medio,0,11,3,findings.json,1,10,sin_limite,FAIL,FAIL,0
+SecureTaskAPI,medio,0,11,3,findings.json,1,15,10,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,1,15,20,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,1,15,50,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,1,15,100,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,1,15,sin_limite,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,1,20,10,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,1,20,20,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,1,20,50,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,1,20,100,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,1,20,sin_limite,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,1,50,10,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,1,50,20,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,1,50,50,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,1,50,100,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,1,50,sin_limite,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,1,100,10,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,1,100,20,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,1,100,50,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,1,100,100,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,1,100,sin_limite,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,2,1,10,FAIL,FAIL,0
+SecureTaskAPI,medio,0,11,3,findings.json,2,1,20,FAIL,FAIL,0
+SecureTaskAPI,medio,0,11,3,findings.json,2,1,50,FAIL,FAIL,0
+SecureTaskAPI,medio,0,11,3,findings.json,2,1,100,FAIL,FAIL,0
+SecureTaskAPI,medio,0,11,3,findings.json,2,1,sin_limite,FAIL,FAIL,0
+SecureTaskAPI,medio,0,11,3,findings.json,2,5,10,FAIL,FAIL,0
+SecureTaskAPI,medio,0,11,3,findings.json,2,5,20,FAIL,FAIL,0
+SecureTaskAPI,medio,0,11,3,findings.json,2,5,50,FAIL,FAIL,0
+SecureTaskAPI,medio,0,11,3,findings.json,2,5,100,FAIL,FAIL,0
+SecureTaskAPI,medio,0,11,3,findings.json,2,5,sin_limite,FAIL,FAIL,0
+SecureTaskAPI,medio,0,11,3,findings.json,2,10,10,FAIL,FAIL,0
+SecureTaskAPI,medio,0,11,3,findings.json,2,10,20,FAIL,FAIL,0
+SecureTaskAPI,medio,0,11,3,findings.json,2,10,50,FAIL,FAIL,0
+SecureTaskAPI,medio,0,11,3,findings.json,2,10,100,FAIL,FAIL,0
+SecureTaskAPI,medio,0,11,3,findings.json,2,10,sin_limite,FAIL,FAIL,0
+SecureTaskAPI,medio,0,11,3,findings.json,2,15,10,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,2,15,20,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,2,15,50,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,2,15,100,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,2,15,sin_limite,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,2,20,10,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,2,20,20,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,2,20,50,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,2,20,100,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,2,20,sin_limite,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,2,50,10,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,2,50,20,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,2,50,50,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,2,50,100,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,2,50,sin_limite,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,2,100,10,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,2,100,20,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,2,100,50,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,2,100,100,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,2,100,sin_limite,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,5,1,10,FAIL,FAIL,0
+SecureTaskAPI,medio,0,11,3,findings.json,5,1,20,FAIL,FAIL,0
+SecureTaskAPI,medio,0,11,3,findings.json,5,1,50,FAIL,FAIL,0
+SecureTaskAPI,medio,0,11,3,findings.json,5,1,100,FAIL,FAIL,0
+SecureTaskAPI,medio,0,11,3,findings.json,5,1,sin_limite,FAIL,FAIL,0
+SecureTaskAPI,medio,0,11,3,findings.json,5,5,10,FAIL,FAIL,0
+SecureTaskAPI,medio,0,11,3,findings.json,5,5,20,FAIL,FAIL,0
+SecureTaskAPI,medio,0,11,3,findings.json,5,5,50,FAIL,FAIL,0
+SecureTaskAPI,medio,0,11,3,findings.json,5,5,100,FAIL,FAIL,0
+SecureTaskAPI,medio,0,11,3,findings.json,5,5,sin_limite,FAIL,FAIL,0
+SecureTaskAPI,medio,0,11,3,findings.json,5,10,10,FAIL,FAIL,0
+SecureTaskAPI,medio,0,11,3,findings.json,5,10,20,FAIL,FAIL,0
+SecureTaskAPI,medio,0,11,3,findings.json,5,10,50,FAIL,FAIL,0
+SecureTaskAPI,medio,0,11,3,findings.json,5,10,100,FAIL,FAIL,0
+SecureTaskAPI,medio,0,11,3,findings.json,5,10,sin_limite,FAIL,FAIL,0
+SecureTaskAPI,medio,0,11,3,findings.json,5,15,10,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,5,15,20,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,5,15,50,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,5,15,100,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,5,15,sin_limite,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,5,20,10,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,5,20,20,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,5,20,50,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,5,20,100,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,5,20,sin_limite,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,5,50,10,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,5,50,20,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,5,50,50,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,5,50,100,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,5,50,sin_limite,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,5,100,10,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,5,100,20,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,5,100,50,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,5,100,100,FAIL,PASS,1
+SecureTaskAPI,medio,0,11,3,findings.json,5,100,sin_limite,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,1,1,10,FAIL,FAIL,0
+SimpleHealthAPI,bajo,0,11,2,findings.json,1,1,20,FAIL,FAIL,0
+SimpleHealthAPI,bajo,0,11,2,findings.json,1,1,50,FAIL,FAIL,0
+SimpleHealthAPI,bajo,0,11,2,findings.json,1,1,100,FAIL,FAIL,0
+SimpleHealthAPI,bajo,0,11,2,findings.json,1,1,sin_limite,FAIL,FAIL,0
+SimpleHealthAPI,bajo,0,11,2,findings.json,1,5,10,FAIL,FAIL,0
+SimpleHealthAPI,bajo,0,11,2,findings.json,1,5,20,FAIL,FAIL,0
+SimpleHealthAPI,bajo,0,11,2,findings.json,1,5,50,FAIL,FAIL,0
+SimpleHealthAPI,bajo,0,11,2,findings.json,1,5,100,FAIL,FAIL,0
+SimpleHealthAPI,bajo,0,11,2,findings.json,1,5,sin_limite,FAIL,FAIL,0
+SimpleHealthAPI,bajo,0,11,2,findings.json,1,10,10,FAIL,FAIL,0
+SimpleHealthAPI,bajo,0,11,2,findings.json,1,10,20,FAIL,FAIL,0
+SimpleHealthAPI,bajo,0,11,2,findings.json,1,10,50,FAIL,FAIL,0
+SimpleHealthAPI,bajo,0,11,2,findings.json,1,10,100,FAIL,FAIL,0
+SimpleHealthAPI,bajo,0,11,2,findings.json,1,10,sin_limite,FAIL,FAIL,0
+SimpleHealthAPI,bajo,0,11,2,findings.json,1,15,10,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,1,15,20,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,1,15,50,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,1,15,100,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,1,15,sin_limite,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,1,20,10,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,1,20,20,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,1,20,50,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,1,20,100,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,1,20,sin_limite,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,1,50,10,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,1,50,20,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,1,50,50,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,1,50,100,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,1,50,sin_limite,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,1,100,10,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,1,100,20,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,1,100,50,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,1,100,100,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,1,100,sin_limite,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,2,1,10,FAIL,FAIL,0
+SimpleHealthAPI,bajo,0,11,2,findings.json,2,1,20,FAIL,FAIL,0
+SimpleHealthAPI,bajo,0,11,2,findings.json,2,1,50,FAIL,FAIL,0
+SimpleHealthAPI,bajo,0,11,2,findings.json,2,1,100,FAIL,FAIL,0
+SimpleHealthAPI,bajo,0,11,2,findings.json,2,1,sin_limite,FAIL,FAIL,0
+SimpleHealthAPI,bajo,0,11,2,findings.json,2,5,10,FAIL,FAIL,0
+SimpleHealthAPI,bajo,0,11,2,findings.json,2,5,20,FAIL,FAIL,0
+SimpleHealthAPI,bajo,0,11,2,findings.json,2,5,50,FAIL,FAIL,0
+SimpleHealthAPI,bajo,0,11,2,findings.json,2,5,100,FAIL,FAIL,0
+SimpleHealthAPI,bajo,0,11,2,findings.json,2,5,sin_limite,FAIL,FAIL,0
+SimpleHealthAPI,bajo,0,11,2,findings.json,2,10,10,FAIL,FAIL,0
+SimpleHealthAPI,bajo,0,11,2,findings.json,2,10,20,FAIL,FAIL,0
+SimpleHealthAPI,bajo,0,11,2,findings.json,2,10,50,FAIL,FAIL,0
+SimpleHealthAPI,bajo,0,11,2,findings.json,2,10,100,FAIL,FAIL,0
+SimpleHealthAPI,bajo,0,11,2,findings.json,2,10,sin_limite,FAIL,FAIL,0
+SimpleHealthAPI,bajo,0,11,2,findings.json,2,15,10,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,2,15,20,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,2,15,50,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,2,15,100,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,2,15,sin_limite,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,2,20,10,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,2,20,20,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,2,20,50,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,2,20,100,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,2,20,sin_limite,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,2,50,10,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,2,50,20,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,2,50,50,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,2,50,100,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,2,50,sin_limite,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,2,100,10,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,2,100,20,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,2,100,50,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,2,100,100,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,2,100,sin_limite,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,5,1,10,FAIL,FAIL,0
+SimpleHealthAPI,bajo,0,11,2,findings.json,5,1,20,FAIL,FAIL,0
+SimpleHealthAPI,bajo,0,11,2,findings.json,5,1,50,FAIL,FAIL,0
+SimpleHealthAPI,bajo,0,11,2,findings.json,5,1,100,FAIL,FAIL,0
+SimpleHealthAPI,bajo,0,11,2,findings.json,5,1,sin_limite,FAIL,FAIL,0
+SimpleHealthAPI,bajo,0,11,2,findings.json,5,5,10,FAIL,FAIL,0
+SimpleHealthAPI,bajo,0,11,2,findings.json,5,5,20,FAIL,FAIL,0
+SimpleHealthAPI,bajo,0,11,2,findings.json,5,5,50,FAIL,FAIL,0
+SimpleHealthAPI,bajo,0,11,2,findings.json,5,5,100,FAIL,FAIL,0
+SimpleHealthAPI,bajo,0,11,2,findings.json,5,5,sin_limite,FAIL,FAIL,0
+SimpleHealthAPI,bajo,0,11,2,findings.json,5,10,10,FAIL,FAIL,0
+SimpleHealthAPI,bajo,0,11,2,findings.json,5,10,20,FAIL,FAIL,0
+SimpleHealthAPI,bajo,0,11,2,findings.json,5,10,50,FAIL,FAIL,0
+SimpleHealthAPI,bajo,0,11,2,findings.json,5,10,100,FAIL,FAIL,0
+SimpleHealthAPI,bajo,0,11,2,findings.json,5,10,sin_limite,FAIL,FAIL,0
+SimpleHealthAPI,bajo,0,11,2,findings.json,5,15,10,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,5,15,20,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,5,15,50,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,5,15,100,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,5,15,sin_limite,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,5,20,10,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,5,20,20,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,5,20,50,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,5,20,100,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,5,20,sin_limite,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,5,50,10,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,5,50,20,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,5,50,50,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,5,50,100,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,5,50,sin_limite,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,5,100,10,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,5,100,20,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,5,100,50,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,5,100,100,FAIL,PASS,1
+SimpleHealthAPI,bajo,0,11,2,findings.json,5,100,sin_limite,FAIL,PASS,1

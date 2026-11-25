@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-05-21T21:07:16.854602",
+  "target_url": "http://localhost:3000",
+  "host": "localhost",
+  "port": 3000,
+  "nmap": {
+    "available": true,
+    "open_ports": [
+      22,
+      3000
+    ],
+    "services": {
+      "22": {
+        "service": "ssh",
+        "version": "OpenSSH 9.6p1 Ubuntu 3ubuntu13.16 (Ubuntu Linux; protocol 2.0)",
+        "interesting": false
+      },
+      "3000": {
+        "service": "ppp?",
+        "version": "",
+        "interesting": false
+      }
+    },
+    "interesting_ports": [],
+    "raw_summary": "PORT     STATE SERVICE VERSION\n22/tcp   open  ssh     OpenSSH 9.6p1 Ubuntu 3ubuntu13.16 (Ubuntu Linux; protocol 2.0)\n3000/tcp open  ppp?"
+  },
+  "route_discovery": {
+    "available": true,
+    "discovered_routes": [],
+    "routes_detail": [],
+    "interesting_routes": []
+  },
+  "fingerprint": {
+    "available": true,
+    "technologies": [
+      "HSTS"
+    ],
+    "server": "",
+    "title": "",
+    "security_headers": {
+      "present": [],
+      "missing": [
+        "content-security-policy",
+        "strict-transport-security",
+        "x-frame-options",
+        "x-content-type-options",
+        "referrer-policy",
+        "permissions-policy"
+      ]
+    },
+    "status_code": 0
+  },
+  "waf": {
+    "available": true,
+    "waf_detected": true,
+    "waf_name": "Generic"
+  },
+  "attack_surface": {
+    "total_findings": 1,
+    "high": 0,
+    "medium": 1,
+    "info": 0,
+    "findings": [
+      {
+        "type": "missing_security_headers",
+        "severity": "MEDIUM",
+        "detail": "Headers faltantes: content-security-policy, strict-transport-security, x-frame-options, x-content-type-options, referrer-policy, permissions-policy"
+      }
+    ]
+  },
+  "nuclei_targets": [
+    "http://localhost:3000"
+  ],
+  "summary": {
+    "open_ports": [
+      22,
+      3000
+    ],
+    "discovered_routes_count": 0,
+    "technologies": [
+      "HSTS"
+    ],
+    "waf_present": true,
+    "missing_security_headers": [
+      "content-security-policy",
+      "strict-transport-security",
+      "x-frame-options",
+      "x-content-type-options",
+      "referrer-policy",
+      "permissions-policy"
+    ],
+    "attack_surface_findings": 1
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "schema_version": "3.0",
+  "generated_at": "2026-11-17T20:20:21.288525",
+  "findings_analyzed": 82,
+  "service": "juice-shop",
+  "environment": "staging",
+  "business_criticality": "high",
+  "ai_provider": "openrouter",
+  "ai_model": "meta-llama/llama-3.3-70b-instruct",
+  "tokens_used": {
+    "prompt": 7516,
+    "completion": 1475,
+    "total": 8991
+  },
+  "evaluation": {
+    "decision": "FAIL",
+    "confidence": 0.9,
+    "risk_level": "CRITICAL",
+    "summary": "Se han identificado varias vulnerabilidades críticas y altas en el pipeline de despliegue, incluyendo inyecciones SQL y vulnerabilidades en componentes desactualizados. Estas vulnerabilidades podrían permitir ataques remotos y comprometer la seguridad de la aplicación.",
+    "reasoning": "El análisis ha revelado que varias vulnerabilidades tienen un alto nivel de explotabilidad, según los scores EPSS y la presencia en la lista KEV. Además, se han identificado cadenas de ataque que podrían permitir a un atacante explotar múltiples vulnerabilidades para obtener acceso no autorizado a la aplicación.",
+    "ssvc_validation": [
+      {
+        "finding_id": "SEM-C2F5F78D",
+        "title": "Express Sequelize Injection",
+        "ssvc_preliminary": "Act",
+        "epss_score": 0.0,
+        "in_kev": false,
+        "ai_assessment": "confirmed",
+        "reasoning": "La vulnerabilidad tiene un alto nivel de explotabilidad y podría permitir a un atacante inyectar código SQL malicioso."
+      },
+      {
+        "finding_id": "TRI-F0061998",
+        "title": "CVE-2023-46233 – crypto-js: PBKDF2 1,000 times weaker than specified in 1993 and 1.3M times weaker than current standard",
+        "ssvc_preliminary": "Act",
+        "epss_score": 0.0064,
+        "in_kev": false,
+        "ai_assessment": "confirmed",
+        "reasoning": "La vulnerabilidad tiene un alto nivel de explotabilidad y podría permitir a un atacante obtener acceso no autorizado a la aplicación."
+      }
+    ],
+    "ssvc_context_used": true,
+    "key_findings": [
+      {
+        "title": "Express Sequelize Injection",
+        "severity": "CRITICAL",
+        "cvss_score": null,
+        "category": "A03:2021 – Injection",
+        "cwe": "CWE-89",
+        "exploitability": "alta",
+        "epss_informed": true,
+        "remote_exploitable": true,
+        "auth_required": false,
+        "public_exploit": true,
+        "why_important": "La vulnerabilidad podría permitir a un atacante inyectar código SQL malicioso y obtener acceso no autorizado a la base de datos.",
+        "business_impact": "La explotación de esta vulnerabilidad podría resultar en la pérdida de datos confidenciales y daños a la reputación de la empresa."
+      },
+      {
+        "title": "CVE-2023-46233 – crypto-js: PBKDF2 1,000 times weaker than specified in 1993 and 1.3M times weaker than current standard",
+        "severity": "CRITICAL",
+        "cvss_score": 9.1,
+        "category": "A06:2021 – Vulnerable and Outdated Components",
+        "cwe": null,
+        "exploitability": "alta",
+        "epss_informed": true,
+        "remote_exploitable": true,
+        "auth_required": false,
+        "public_exploit": true,
+        "why_important": "La vulnerabilidad podría permitir a un atacante obtener acceso no autorizado a la aplicación y realizar acciones maliciosas.",
+        "business_impact": "La explotación de esta vulnerabilidad podría resultar en la pérdida de datos confidenciales y daños a la reputación de la empresa."
+      }
+    ],
+    "attack_chains": [
+      {
+        "chain_id": "CHAIN-001",
+        "title": "Inyección SQL y explotación de vulnerabilidad en crypto-js",
+        "severity": "CRITICAL",
+        "finding_ids": [
+          "SEM-C2F5F78D",
+          "TRI-F0061998"
+        ],
+        "steps": [
+          "Paso 1: El atacante inyecta código SQL malicioso a través de la vulnerabilidad en Express Sequelize.",
+          "Paso 2: El atacante explota la vulnerabilidad en crypto-js para obtener acceso no autorizado a la aplicación.",
+          "Paso 3: El atacante realiza acciones maliciosas y obtiene acceso a datos confidenciales."
+        ],
+        "likelihood": "alta",
+        "combined_impact": "La explotación de esta cadena de ataque podría resultar en la pérdida de datos confidenciales y daños a la reputación de la empresa."
+      }
+    ],
+    "conditions": [],
+    "remediation_priorities": [
+      {
+        "priority": 1,
+        "finding_id": "SEM-C2F5F78D",
+        "action": "Actualizar la versión de Express Sequelize y aplicar parches de seguridad.",
+        "tool": "semgrep",
+        "timeline": "inmediato",
+        "effort": "alto",
+        "fix_available": true,
+        "fix_version": "latest"
+      },
+      {
+        "priority": 2,
+        "finding_id": "TRI-F0061998",
+        "action": "Actualizar la versión de crypto-js y aplicar parches de seguridad.",
+        "tool": "trivy",
+        "timeline": "inmediato",
+        "effort": "alto",
+        "fix_available": true,
+        "fix_version": "4.2.0"
+      }
+    ],
+    "coverage_analysis": {
+      "sast_coverage": "buena",
+      "sca_coverage": "buena",
+      "dast_coverage": "parcial",
+      "pentest_coverage": "parcial",
+      "overall_coverage": "La cobertura de las herramientas de seguridad es buena, pero hay algunas áreas que requieren más atención.",
+      "blind_spots": [
+        "Riesgo potencial no cubierto: Ataques de denegación de servicio"
+      ]
+    },
+    "false_positive_estimate": "baja",
+    "false_positive_reasoning": "La mayoría de las vulnerabilidades identificadas tienen un alto nivel de explotabilidad y son confirmadas por múltiples fuentes.",
+    "owasp_top10_present": [
+      "A03:2021 – Injection",
+      "A06:2021 – Vulnerable and Outdated Components"
+    ],
+    "risk_score": 0.8,
+    "deploy_recommendation": "No se recomienda desplegar la aplicación en su estado actual debido a las vulnerabilidades críticas identificadas. Se deben aplicar parches de seguridad y realizar pruebas adicionales antes de desplegar la aplicación."
+  },
+  "ssvc_enrichment": {
+    "used": true,
+    "action_counts": {
+      "Act": 42,
+      "Attend": 5,
+      "Track*": 26,
+      "Track": 9
+    },
+    "kev_entries": 1782,
+    "epss_fetched": 57,
+    "f1_metrics": {
+      "dimension": "Exploitation (active vs not_active)",
+      "ground_truth_source": "CISA KEV + EPSS ≥ 0.5",
+      "reference": "Al Haddad et al. (2025) – arXiv 2510.18508",
+      "cves_evaluated": 58,
+      "true_positives": 0,
+      "false_positives": 0,
+      "true_negatives": 58,
+      "false_negatives": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "accuracy": 1.0,
+      "note": "F1 calculado sobre la dimensión Exploitation del árbol SSVC. Solo CVEs con CISA KEV o EPSS disponible se incluyen en el cálculo. Hallazgos sin CVE ID (Semgrep/ZAP) se excluyen del cálculo formal."
+    },
+    "classified_count": 82
+  },
+  "prompt_version": "3.0-ssvc-enriched",
+  "_academic_reference": "Al Haddad et al. (2025) – arXiv 2510.18508",
+  "_academic_note": "Evaluación híbrida: LLM enriquecido con clasificaciones SSVC preliminares y datos empíricos EPSS/CISA KEV. El LLM puede validar o corregir las clasificaciones SSVC con razonamiento contextual."
+}

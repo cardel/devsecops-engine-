@@ -1,0 +1,4 @@
+caso,corrida,fecha_hora_utc,proveedor,modelo,decision,confianza,riesgo_global,respaldo_estatico,error,tokens_entrada,tokens_salida
+juice-shop,1,2026-11-17T18:04:57Z,fallback_static,threshold_rules_v1,FAIL,0.6,CRITICAL,si,Error code: 404 - The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.,0,0
+fitfusion-backend,1,2026-11-17T18:06:59Z,fallback_static,threshold_rules_v1,FAIL,0.6,CRITICAL,si,Error code: 404 - The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.,0,0
+secure-task-api,1,2026-11-17T18:08:52Z,fallback_static,threshold_rules_v1,FAIL,0.6,HIGH,si,Error code: 404 - The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.,0,0

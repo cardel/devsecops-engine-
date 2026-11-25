@@ -1,0 +1,22 @@
+name: Replica DVWA
+
+on:
+  workflow_dispatch:
+
+jobs:
+  security:
+    uses: cardel/devsecops-engine-/.github/workflows/reusable-devsecops.yml@cc668ce9bf8c4eb319b8a69b71e6d43c74bd99d5
+    with:
+      target_image:    'vulnerables/web-dvwa:latest'
+      target_port:     '80'
+      service_name:    'dvwa'
+      criticality:     'high'
+      environment:     'staging'
+      source_repo:     'ManuelArango1229/DVWAForkTG'
+      source_repo_ref: 'master'
+      language:        'php'
+      use_ghcr:        false
+    secrets:
+      GROQ_API_KEY:   ${{ secrets.GROQ_API_KEY }}
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      GHCR_TOKEN:     ${{ secrets.GITHUB_TOKEN }}

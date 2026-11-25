@@ -1,0 +1,163 @@
+{
+  "schema_version": "3.0",
+  "generated_at": "2026-11-17T20:22:10.165321",
+  "findings_analyzed": 17,
+  "service": "simple-health-api",
+  "environment": "staging",
+  "business_criticality": "low",
+  "ai_provider": "openrouter",
+  "ai_model": "meta-llama/llama-3.3-70b-instruct",
+  "tokens_used": {
+    "prompt": 6781,
+    "completion": 1501,
+    "total": 8282
+  },
+  "evaluation": {
+    "decision": "CONDITIONAL",
+    "confidence": 0.8,
+    "risk_level": "HIGH",
+    "summary": "Se han identificado varias vulnerabilidades de alta severidad en el pipeline de DevSecOps, principalmente relacionadas con componentes vulnerables y desactualizados. Aunque no se han encontrado exploits públicos para estas vulnerabilidades, su presencia aumenta el riesgo de ataques. Se recomienda mitigar estas vulnerabilidades antes de proceder con el despliegue.",
+    "reasoning": "El análisis ha revelado 11 hallazgos de alta severidad, todos ellos relacionados con la categoría A06:2021 de OWASP Top 10, que se refiere a componentes vulnerables y desactualizados. Las herramientas de análisis de seguridad han detectado varias versiones desactualizadas de bibliotecas y frameworks, lo que podría permitir a un atacante explotar estas vulnerabilidades. Aunque los scores EPSS son bajos, la presencia de estas vulnerabilidades en el sistema aumenta el riesgo de ataques.",
+    "ssvc_validation": [
+      {
+        "finding_id": "TRI-E8929BCB",
+        "title": "CVE-2024-21538 – cross-spawn: regular expression denial of service",
+        "ssvc_preliminary": "Attend",
+        "epss_score": 0.0087,
+        "in_kev": false,
+        "ai_assessment": "confirmed",
+        "reasoning": "La vulnerabilidad es explotable y aunque el score EPSS es bajo, su presencia en el sistema aumenta el riesgo de ataques."
+      },
+      {
+        "finding_id": "TRI-CD8B31C7",
+        "title": "CVE-2025-64756 – glob: glob: Command Injection Vulnerability via Malicious Filenames",
+        "ssvc_preliminary": "Attend",
+        "epss_score": 0.0309,
+        "in_kev": false,
+        "ai_assessment": "confirmed",
+        "reasoning": "La vulnerabilidad es explotable y el score EPSS es moderado, lo que indica un riesgo significativo."
+      }
+    ],
+    "ssvc_context_used": true,
+    "key_findings": [
+      {
+        "title": "CVE-2024-21538 – cross-spawn: regular expression denial of service",
+        "severity": "HIGH",
+        "cvss_score": 4.4,
+        "category": "A06:2021 – Vulnerable and Outdated Components",
+        "cwe": null,
+        "exploitability": "alta",
+        "epss_informed": true,
+        "remote_exploitable": true,
+        "auth_required": false,
+        "public_exploit": false,
+        "why_important": "La vulnerabilidad es explotable y su presencia en el sistema aumenta el riesgo de ataques.",
+        "business_impact": "Un ataque exitoso podría causar una denegación de servicio, afectando la disponibilidad del sistema."
+      },
+      {
+        "title": "CVE-2025-64756 – glob: glob: Command Injection Vulnerability via Malicious Filenames",
+        "severity": "HIGH",
+        "cvss_score": 7.5,
+        "category": "A06:2021 – Vulnerable and Outdated Components",
+        "cwe": null,
+        "exploitability": "alta",
+        "epss_informed": true,
+        "remote_exploitable": true,
+        "auth_required": false,
+        "public_exploit": false,
+        "why_important": "La vulnerabilidad es explotable y el score EPSS es moderado, lo que indica un riesgo significativo.",
+        "business_impact": "Un ataque exitoso podría permitir la ejecución de comandos arbitrarios, comprometiendo la seguridad del sistema."
+      }
+    ],
+    "attack_chains": [
+      {
+        "chain_id": "CHAIN-001",
+        "title": "Explotación de vulnerabilidades en componentes desactualizados",
+        "severity": "CRITICAL",
+        "finding_ids": [
+          "TRI-E8929BCB",
+          "TRI-CD8B31C7"
+        ],
+        "steps": [
+          "Paso 1: Un atacante explota la vulnerabilidad CVE-2024-21538 para causar una denegación de servicio.",
+          "Paso 2: Con el sistema vulnerable, el atacante explota la vulnerabilidad CVE-2025-64756 para ejecutar comandos arbitrarios.",
+          "Paso 3: El atacante compromete la seguridad del sistema y obtiene acceso no autorizado."
+        ],
+        "likelihood": "alta",
+        "combined_impact": "El impacto combinado de estas vulnerabilidades es crítico, ya que permiten a un atacante comprometer la seguridad del sistema."
+      }
+    ],
+    "conditions": [
+      "Mitigar las vulnerabilidades identificadas antes de proceder con el despliegue."
+    ],
+    "remediation_priorities": [
+      {
+        "priority": 1,
+        "finding_id": "TRI-E8929BCB",
+        "action": "Actualizar cross-spawn a la versión 7.0.5 o superior.",
+        "tool": "trivy",
+        "timeline": "inmediato",
+        "effort": "bajo",
+        "fix_available": true,
+        "fix_version": "7.0.5"
+      },
+      {
+        "priority": 2,
+        "finding_id": "TRI-CD8B31C7",
+        "action": "Actualizar glob a la versión 11.1.0 o superior.",
+        "tool": "trivy",
+        "timeline": "inmediato",
+        "effort": "bajo",
+        "fix_available": true,
+        "fix_version": "11.1.0"
+      }
+    ],
+    "coverage_analysis": {
+      "sast_coverage": "buena",
+      "sca_coverage": "buena",
+      "dast_coverage": "parcial",
+      "pentest_coverage": "parcial",
+      "overall_coverage": "La cobertura de análisis de seguridad es buena, pero hay algunas áreas que requieren más atención.",
+      "blind_spots": [
+        "Riesgo potencial no cubierto: Ataques de phishing"
+      ]
+    },
+    "false_positive_estimate": "baja",
+    "false_positive_reasoning": "La mayoría de los hallazgos son vulnerabilidades reales y no falsos positivos.",
+    "owasp_top10_present": [
+      "A06:2021 – Vulnerable and Outdated Components"
+    ],
+    "risk_score": 0.7,
+    "deploy_recommendation": "Se recomienda mitigar las vulnerabilidades identificadas antes de proceder con el despliegue."
+  },
+  "ssvc_enrichment": {
+    "used": true,
+    "action_counts": {
+      "Act": 0,
+      "Attend": 13,
+      "Track*": 1,
+      "Track": 3
+    },
+    "kev_entries": 1782,
+    "epss_fetched": 13,
+    "f1_metrics": {
+      "dimension": "Exploitation (active vs not_active)",
+      "ground_truth_source": "CISA KEV + EPSS ≥ 0.5",
+      "reference": "Al Haddad et al. (2025) – arXiv 2510.18508",
+      "cves_evaluated": 13,
+      "true_positives": 0,
+      "false_positives": 0,
+      "true_negatives": 13,
+      "false_negatives": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "accuracy": 1.0,
+      "note": "F1 calculado sobre la dimensión Exploitation del árbol SSVC. Solo CVEs con CISA KEV o EPSS disponible se incluyen en el cálculo. Hallazgos sin CVE ID (Semgrep/ZAP) se excluyen del cálculo formal."
+    },
+    "classified_count": 17
+  },
+  "prompt_version": "3.0-ssvc-enriched",
+  "_academic_reference": "Al Haddad et al. (2025) – arXiv 2510.18508",
+  "_academic_note": "Evaluación híbrida: LLM enriquecido con clasificaciones SSVC preliminares y datos empíricos EPSS/CISA KEV. El LLM puede validar o corregir las clasificaciones SSVC con razonamiento contextual."
+}

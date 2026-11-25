@@ -1,0 +1,162 @@
+{
+  "schema_version": "3.0",
+  "generated_at": "2026-11-17T18:36:42.379190",
+  "findings_analyzed": 434,
+  "service": "dvwa",
+  "environment": "staging",
+  "business_criticality": "high",
+  "ai_provider": "openai",
+  "ai_model": "gpt-4o-mini",
+  "tokens_used": {
+    "prompt": 7357,
+    "completion": 1497,
+    "total": 8854
+  },
+  "evaluation": {
+    "decision": "FAIL",
+    "confidence": 0.9,
+    "risk_level": "CRITICAL",
+    "summary": "El análisis revela múltiples hallazgos críticos y altos que son explotables remotamente, lo que representa un riesgo significativo para el entorno de staging. La presencia de vulnerabilidades de inyección SQL y componentes vulnerables en el servidor Apache requiere atención inmediata.",
+    "reasoning": "Se identificaron varias vulnerabilidades críticas, incluyendo CVE-2021-26691 y CVE-2021-40438, que son explotables remotamente y tienen un alto impacto potencial. Además, la clasificación SSVC de varios hallazgos como 'Act' se valida con EPSS y KEV, indicando que son relevantes para la seguridad del servicio. La combinación de estas vulnerabilidades puede permitir a un atacante comprometer el sistema y acceder a datos sensibles.",
+    "ssvc_validation": [
+      {
+        "finding_id": "TRI-B5B0B6D8",
+        "title": "CVE-2021-26691 – httpd: mod_session: Heap overflow via a crafted SessionHeader value",
+        "ssvc_preliminary": "Act",
+        "epss_score": 0.6807,
+        "in_kev": false,
+        "ai_assessment": "confirmed",
+        "reasoning": "La vulnerabilidad tiene un EPSS alto, lo que indica que es explotable en el contexto actual, validando la clasificación SSVC como 'Act'."
+      },
+      {
+        "finding_id": "TRI-E2222A48",
+        "title": "CVE-2021-40438 – httpd: mod_proxy: SSRF via a crafted request uri-path containing \"unix:\"",
+        "ssvc_preliminary": "Act",
+        "epss_score": 1.0,
+        "in_kev": true,
+        "ai_assessment": "confirmed",
+        "reasoning": "La vulnerabilidad está en KEV y tiene un EPSS de 1.0, confirmando su explotación activa y la clasificación SSVC como 'Act'."
+      }
+    ],
+    "ssvc_context_used": true,
+    "key_findings": [
+      {
+        "title": "CVE-2021-26691 – httpd: mod_session: Heap overflow via a crafted SessionHeader value",
+        "severity": "CRITICAL",
+        "cvss_score": 9.8,
+        "category": "A06:2021 – Vulnerable and Outdated Components",
+        "cwe": null,
+        "exploitability": "alta",
+        "epss_informed": true,
+        "remote_exploitable": true,
+        "auth_required": false,
+        "public_exploit": true,
+        "why_important": "Permite a un atacante ejecutar código arbitrario en el servidor, comprometiendo la integridad del sistema.",
+        "business_impact": "Puede resultar en una violación de datos y pérdida de confianza del cliente, afectando gravemente la reputación de la empresa."
+      },
+      {
+        "title": "CVE-2021-40438 – httpd: mod_proxy: SSRF via a crafted request uri-path containing \"unix:\"",
+        "severity": "CRITICAL",
+        "cvss_score": 9.0,
+        "category": "A06:2021 – Vulnerable and Outdated Components",
+        "cwe": null,
+        "exploitability": "alta",
+        "epss_informed": true,
+        "remote_exploitable": true,
+        "auth_required": false,
+        "public_exploit": true,
+        "why_important": "Permite a un atacante redirigir solicitudes a servidores internos, exponiendo servicios críticos.",
+        "business_impact": "Puede llevar a la exposición de datos sensibles y a la explotación de otros servicios internos."
+      }
+    ],
+    "attack_chains": [
+      {
+        "chain_id": "CHAIN-001",
+        "title": "Explotación de vulnerabilidades críticas en Apache HTTP Server",
+        "severity": "CRITICAL",
+        "finding_ids": [
+          "TRI-B5B0B6D8",
+          "TRI-E2222A48"
+        ],
+        "steps": [
+          "Paso 1: El atacante envía una solicitud manipulada que explota CVE-2021-40438 para redirigir el tráfico a un servidor interno.",
+          "Paso 2: Utilizando la vulnerabilidad CVE-2021-26691, el atacante ejecuta código arbitrario en el servidor Apache.",
+          "Paso 3: Resultado final: El atacante obtiene acceso a datos sensibles y puede comprometer la infraestructura interna."
+        ],
+        "likelihood": "alta",
+        "combined_impact": "La combinación de estas vulnerabilidades permite un acceso completo al sistema, lo que resulta en una violación de datos y posible daño a la infraestructura."
+      }
+    ],
+    "conditions": [],
+    "remediation_priorities": [
+      {
+        "priority": 1,
+        "finding_id": "TRI-B5B0B6D8",
+        "action": "Actualizar apache2 de 2.4.25-3+deb9u5 a 2.4.25-3+deb9u10",
+        "tool": "trivy",
+        "timeline": "inmediato",
+        "effort": "bajo",
+        "fix_available": true,
+        "fix_version": "2.4.25-3+deb9u10"
+      },
+      {
+        "priority": 2,
+        "finding_id": "TRI-E2222A48",
+        "action": "Actualizar apache2 de 2.4.25-3+deb9u5 a 2.4.25-3+deb9u11",
+        "tool": "trivy",
+        "timeline": "inmediato",
+        "effort": "bajo",
+        "fix_available": true,
+        "fix_version": "2.4.25-3+deb9u11"
+      }
+    ],
+    "coverage_analysis": {
+      "sast_coverage": "buena",
+      "sca_coverage": "buena",
+      "dast_coverage": "parcial",
+      "pentest_coverage": "parcial",
+      "overall_coverage": "La cobertura general es adecuada, pero se deben abordar las vulnerabilidades críticas identificadas.",
+      "blind_spots": [
+        "Falta de pruebas de penetración exhaustivas en el entorno de staging."
+      ]
+    },
+    "false_positive_estimate": "baja",
+    "false_positive_reasoning": "Las vulnerabilidades identificadas son críticas y están respaldadas por datos de EPSS y KEV, lo que sugiere que son reales y explotables.",
+    "owasp_top10_present": [
+      "A06:2021 – Vulnerable and Outdated Components",
+      "A03:2021 – Injection"
+    ],
+    "risk_score": 0.0,
+    "deploy_recommendation": "No se recomienda el despliegue hasta que se aborden las vulnerabilidades críticas identificadas."
+  },
+  "ssvc_enrichment": {
+    "used": true,
+    "action_counts": {
+      "Act": 259,
+      "Attend": 7,
+      "Track*": 148,
+      "Track": 20
+    },
+    "kev_entries": 1781,
+    "epss_fetched": 386,
+    "f1_metrics": {
+      "dimension": "Exploitation (active vs not_active)",
+      "ground_truth_source": "CISA KEV + EPSS ≥ 0.5",
+      "reference": "Al Haddad et al. (2025) – arXiv 2510.18508",
+      "cves_evaluated": 386,
+      "true_positives": 42,
+      "false_positives": 0,
+      "true_negatives": 344,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "accuracy": 1.0,
+      "note": "F1 calculado sobre la dimensión Exploitation del árbol SSVC. Solo CVEs con CISA KEV o EPSS disponible se incluyen en el cálculo. Hallazgos sin CVE ID (Semgrep/ZAP) se excluyen del cálculo formal."
+    },
+    "classified_count": 434
+  },
+  "prompt_version": "3.0-ssvc-enriched",
+  "_academic_reference": "Al Haddad et al. (2025) – arXiv 2510.18508",
+  "_academic_note": "Evaluación híbrida: LLM enriquecido con clasificaciones SSVC preliminares y datos empíricos EPSS/CISA KEV. El LLM puede validar o corregir las clasificaciones SSVC con razonamiento contextual."
+}
